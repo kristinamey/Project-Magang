@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/welcome"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/belajar_rem"
+        android:src="@drawable/reading"
+        android:layout_width="80.9dp"
+        android:layout_height="84.29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="75.1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="110dp"
+        />
+
+    <Button
+        android:id="@+id/btn_belajar"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="179dp"
+        android:text="Belajar"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <ImageView
+        android:id="@+id/hiburan_rem"
+        android:src="@drawable/rolcoster"
+        android:layout_width="76.49dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="129dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="216dp" />
+
+    <Button
+        android:id="@+id/btn_hiburan"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="172dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="277dp"
+        android:text="Hiburan"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <ImageView
+        android:id="@+id/button_quiz"
+        android:src="@drawable/mengajar"
+        android:layout_width="100dp"
+        android:layout_height="98dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="233dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="320dp"
+        android:background="#00000000"
+        />
+
+    <Button
+        android:id="@+id/btn_quiz"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="382dp"
+        android:text="quiz"
+        android:gravity="center_horizontal|center_vertical" />
+
+</RelativeLayout>

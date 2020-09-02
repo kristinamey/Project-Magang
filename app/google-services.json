@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "35154479258",
+    "firebase_url": "https://sinow-3e6f6.firebaseio.com",
+    "project_id": "sinow-3e6f6",
+    "storage_bucket": "sinow-3e6f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35154479258:android:b4bc0199730dbfe7d6f723",
+        "android_client_info": {
+          "package_name": "com.example.sinow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35154479258-jvj02emb6stod8f6qslo1mb4ctkugq4k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sinow",
+            "certificate_hash": "ed1588e9755d386709c0169beeed614565bc7279"
+          }
+        },
+        {
+          "client_id": "35154479258-ttc27mhm9u8ks9spdlva2ld0qm3pl58g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-Jlr3Lud7J99AEhkyvlgF39F8FD4uvWs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35154479258-ttc27mhm9u8ks9spdlva2ld0qm3pl58g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
