@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".quis"></activity>
+        <activity android:name=".mengenalwarna"></activity>
+        <activity android:name=".buahdansayur" />
+        <activity android:name=".hewan" />
+        <activity android:name=".utamamembaca" />
+        <activity android:name=".belajarangkalevel1" />
+        <activity android:name=".utamabelajarangka" />
+        <activity android:name=".utamabelajarhuruf" />
+        <activity android:name=".utamamengenalhuruf" />
+        <activity android:name=".quis" />
         <activity android:name=".hiburan" />
         <activity android:name=".home" />
         <activity android:name=".belajar" />
