@@ -14,5 +14,13 @@ class utamabelajarangka : AppCompatActivity() {
             val intent = Intent(this, belajarangkalevel1::class.java)
             (startActivity(intent))
         }
+        btn_level2.setOnClickListener {
+            val intent = Intent(this, belajarangkalevel2::class.java)
+            (startActivity(intent))
+        }
+        btn_level3.setOnClickListener {
+            val intent = Intent(this, belajarangkalevel3::class.java)
+            (startActivity(intent))
         }
     }
+}

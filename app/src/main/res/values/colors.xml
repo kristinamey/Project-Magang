@@ -3,9 +3,13 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="splashscreen">#FFFFFF</color>
+    <color name="putih">#FFFFFF</color>
     <color name="button_warnainti1">#6EB5C0</color>
     <color name="button_warnainti2">#006C84</color>
     <color name="buttonbelajar">#ffa500</color>
-
+    <color name="hitam">#000000</color>
+    <color name="biru">#445871</color>
+    <color name="birumuda">#B2D0C4</color>
+    <color name="biruhome">#47D7DF</color>
+    <color name="orenangka">#EFB580</color>
 </resources>
