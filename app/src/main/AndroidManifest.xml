@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
         <activity android:name=".belajarangkalevel2"></activity>
         <activity android:name=".belajarangkalevel3" />
+        <activity android:name=".mewarnai"></activity>
+        <activity android:name=".menyanyi" />
+        <activity android:name=".utamahiburan" />
         <activity android:name=".Belajarangkalevel2Activity" />
         <activity android:name=".activity_belajarlevel2" />
         <activity android:name=".mengenalwarna" />
