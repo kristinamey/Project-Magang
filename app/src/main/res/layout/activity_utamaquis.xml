@@ -22,7 +22,9 @@
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal|center_vertical"
         android:text="Quis Membaca"
+        android:fontFamily="@font/baloo"
         android:textSize="25dp"
+        android:textColor="@color/hitam"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
@@ -38,7 +40,6 @@
         android:src="@drawable/sound"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:clipToOutline="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/gifImageView6"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +71,8 @@
         app:layout_constraintStart_toStartOf="@+id/gifImageView6"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.026"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
 
     <Button
         android:id="@+id/quis1"
@@ -121,7 +123,7 @@
         android:id="@+id/quis4"
         android:layout_width="114dp"
         android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/kotakquis"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -12,7 +12,6 @@
 
         <activity android:name=".belajarangkalevel2"></activity>
         <activity android:name=".belajarangkalevel3" />
-        <activity android:name=".mewarnai"></activity>
         <activity android:name=".quisberhitung"></activity>
         <activity android:name=".utamaquis" />
         <activity android:name=".mewarnai" />

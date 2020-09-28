@@ -62,9 +62,11 @@
         android:textStyle="normal" />
 
     <Button
+        android:background="@color/orenangka"
         android:id="@+id/btn_belajar"
         android:layout_width="100dp"
         android:layout_height="42dp"
+        android:fontFamily="@font/poppins"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="43dp"
         android:layout_alignParentTop="true"
@@ -84,11 +86,13 @@
         android:src="@drawable/rolcoster" />
 
     <Button
+        android:background="@color/orenangka"
         android:id="@+id/btn_hiburan"
         android:layout_width="100dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins"
         android:layout_marginLeft="126dp"
         android:layout_marginTop="288dp"
         android:gravity="center_horizontal|center_vertical"
@@ -102,6 +106,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="207dp"
+
         android:layout_marginTop="326dp"
         android:background="#00000000"
         android:src="@drawable/mengajar" />
@@ -112,6 +117,8 @@
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins"
+        android:background="@color/orenangka"
         android:layout_marginLeft="213dp"
         android:layout_marginTop="401dp"
         android:gravity="center_horizontal|center_vertical"

@@ -32,6 +32,7 @@
         android:layout_marginTop="38dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="Belajar Membaca"
+        android:fontFamily="@font/baloo"
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
