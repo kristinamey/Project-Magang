@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,7 @@
     tools:context=".quis">
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
@@ -14,46 +15,65 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/button_meny"
-        android:layout_width="150dp"
-        android:layout_height="180dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="228dp"
-        android:background="#00000000" />
-
-    <Button
-        android:id="@+id/rectangle_1"
-        android:text="Menyanyi"
-        android:layout_width="150dp"
-        android:layout_height="36dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="372dp" />
+        android:id="@+id/keluar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/keluar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/button_mewa"
+        android:id="@+id/view_membaca"
         android:layout_width="150dp"
         android:layout_height="180dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="194dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="228dp"
-        android:background="#00000000" />
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
 
     <Button
-        android:id="@+id/mewarnai"
+        android:id="@+id/membaca"
         android:layout_width="150dp"
         android:layout_height="36dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="194dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="372dp"
-        android:text="mewarnai"
-        android:gravity="center_horizontal|center_vertical" />
+        android:text="Quis Membaca"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
 
+    <ImageView
+        android:id="@+id/view_berhitung"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/berhitung"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
 
+    <Button
+        android:id="@+id/berhitung"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Quis Berhitung"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
