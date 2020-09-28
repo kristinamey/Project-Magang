@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".hewan">
+    tools:context=".belajarangkalevel3">
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView2"
@@ -14,28 +14,28 @@
         android:src="@drawable/homesementara"
         tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/konten_huruf"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="282dp"
         android:layout_height="322dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/rectangle_5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/gifImageView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537" />
+        android:background="@drawable/rectangle_5"
+        tools:ignore="MissingConstraints">
+
+    </androidx.viewpager.widget.ViewPager>
 
     <ImageView
         android:id="@+id/keluar"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/keluar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="35dp"
+        android:src="@drawable/keluar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -51,7 +51,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="38dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="Hewan"
+        android:text="Mengenal Angka"
         android:fontFamily="@font/baloo"
         android:textColor="#000000"
         android:textSize="20dp"
@@ -77,24 +77,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/satu"
-        android:layout_width="105dp"
-        android:layout_height="49dp"
+        android:id="@+id/seratus"
+        android:layout_width="136dp"
+        android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="top"
-        android:textColor="#000000"
-        android:text="SAPI"
-        android:fontFamily="@font/poppins2"
-        android:textSize="25dp"
+        android:text="SERATUS"
         android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:fontFamily="@font/poppins2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/gifImageView2"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.702"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,RtlCompat" />
 
     <ImageView
         android:id="@+id/next"
@@ -110,6 +110,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/reload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/reload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.893"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
         android:id="@+id/some_id"
         android:layout_width="180dp"
         android:layout_height="138dp"
@@ -120,37 +132,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/indo"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/indo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.293"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915"
-        tools:ignore="MissingConstraints" />
-
-
-    <ImageView
-        android:id="@+id/emojione_fl"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/inggris"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915"
-        tools:ignore="MissingConstraints" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

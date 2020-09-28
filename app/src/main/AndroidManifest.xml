@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity android:name=".belajarangkalevel2"></activity>
+        <activity android:name=".belajarangkalevel3" />
         <activity android:name=".quisberhitung"></activity>
         <activity android:name=".utamaquis" />
         <activity android:name=".mewarnai" />
         <activity android:name=".menyanyi" />
-        <activity android:name=".utamahiburan" />
-        <activity android:name=".Belajarangkalevel2Activity" />
-        <activity android:name=".activity_belajarlevel2" />
         <activity android:name=".mengenalwarna" />
         <activity android:name=".buahdansayur" />
         <activity android:name=".hewan" />
@@ -23,7 +23,6 @@
         <activity android:name=".belajarangkalevel1" />
         <activity android:name=".utamabelajarangka" />
         <activity android:name=".utamabelajarhuruf" />
-        <activity android:name=".utamamengenalhuruf" />
         <activity android:name=".quis" />
         <activity android:name=".hiburan" />
         <activity android:name=".home" />

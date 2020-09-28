@@ -29,6 +29,8 @@
     <TextView
         android:id="@+id/Mewarnai"
         android:textSize="25dp"
+        android:textColor="@color/hitam"
+        android:fontFamily="@font/baloo"
         android:layout_width="257dp"
         android:layout_height="32dp"
         android:layout_alignParentLeft="true"

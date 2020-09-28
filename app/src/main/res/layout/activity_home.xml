@@ -15,19 +15,58 @@
 
     <ImageView
         android:id="@+id/belajar_rem"
-        android:src="@drawable/reading"
-        android:layout_width="80.9dp"
-        android:layout_height="84.29dp"
+        android:layout_width="wrap_content"
+        android:layout_height="87dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="75.1dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="110dp"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="221dp"
+        android:layout_marginBottom="532dp"
+        android:src="@drawable/reading" />
+
+    <TextView
+        android:id="@+id/selamat_dat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:textSize="24dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="SELAMAT DATANG"
+        android:textAlignment="center"
+        android:textColor="@color/hitam"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pilih_menu_"
+        android:fontFamily="@font/baloo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="47dp"
+        android:text="Pilih Menu yang kamu inginkan"
+        android:textAlignment="center"
+        android:textColor="@color/hitam"
+        android:textSize="13dp"
+        android:textStyle="normal" />
 
     <Button
+        android:background="@color/orenangka"
         android:id="@+id/btn_belajar"
         android:layout_width="100dp"
         android:layout_height="42dp"
+        android:fontFamily="@font/poppins"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="43dp"
         android:layout_alignParentTop="true"
@@ -37,46 +76,52 @@
 
     <ImageView
         android:id="@+id/hiburan_rem"
-        android:src="@drawable/rolcoster"
-        android:layout_width="76.49dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="104dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="129dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="216dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="121dp"
+        android:layout_marginTop="211dp"
+        android:src="@drawable/rolcoster" />
 
     <Button
+        android:background="@color/orenangka"
         android:id="@+id/btn_hiburan"
         android:layout_width="100dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="172dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="277dp"
-        android:text="Hiburan"
-        android:gravity="center_horizontal|center_vertical" />
+        android:fontFamily="@font/poppins"
+        android:layout_marginLeft="126dp"
+        android:layout_marginTop="288dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Hiburan" />
 
     <ImageView
         android:id="@+id/button_quiz"
-        android:src="@drawable/mengajar"
-        android:layout_width="100dp"
+        android:layout_width="101dp"
         android:layout_height="98dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="233dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="320dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="207dp"
+
+        android:layout_marginTop="326dp"
         android:background="#00000000"
-        />
+        android:src="@drawable/mengajar" />
 
     <Button
         android:id="@+id/btn_quiz"
         android:layout_width="100dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="250dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="382dp"
-        android:text="quiz"
-        android:gravity="center_horizontal|center_vertical" />
+        android:fontFamily="@font/poppins"
+        android:background="@color/orenangka"
+        android:layout_marginLeft="213dp"
+        android:layout_marginTop="401dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="quiz" />
 
 </RelativeLayout>
