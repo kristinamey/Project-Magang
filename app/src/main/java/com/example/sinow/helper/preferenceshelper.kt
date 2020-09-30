@@ -27,7 +27,13 @@ class preferenceshelper (context: Context) {
         editor.putBoolean(key, value)
             .apply()
     }
+
     fun getBoolean(key: String) : Boolean{
         return sharedpref.getBoolean(key, false)
+    }
+
+    fun clear(){
+        editor.clear()
+            .apply()
     }
 }
