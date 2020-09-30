@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_belajar.*
+import kotlinx.android.synthetic.main.activity_quis.*
 import kotlinx.android.synthetic.main.activity_utamamembaca.*
+import kotlinx.android.synthetic.main.activity_utamamembaca.keluar
 
 class utamamembaca : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +20,10 @@ class utamamembaca : AppCompatActivity() {
         btn_buah.setOnClickListener {
             val intent = Intent (this, buahdansayur::class.java)
             (startActivity(intent))
+        }
+        keluar.setOnClickListener {
+            val intent = Intent(this, belajar::class.java)
+            startActivity(intent)
         }
     }
 }

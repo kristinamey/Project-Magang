@@ -22,6 +22,50 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
+    <TextView
+        android:id="@+id/yukBelajar"
+        android:layout_width="296dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/baloo"
+        android:text="YUK BELAJAR !!!"
+        android:textAlignment="center"
+        android:textColor="@color/hitam"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/smgtBelajar"
+        android:layout_width="293dp"
+        android:layout_height="41dp"
+        android:fontFamily="@font/baloo"
+        android:text="Hei, Semangat Belajar"
+        android:textAlignment="center"
+        android:textColor="@color/hitam"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView"
+        app:layout_constraintVertical_bias="0.075"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/belajar_rem"
+        android:layout_width="113dp"
+        android:layout_height="136dp"
+        android:src="@drawable/singa1"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView9"
+        app:layout_constraintVertical_bias="0.262"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
         android:id="@+id/keluar2"
         android:layout_width="wrap_content"

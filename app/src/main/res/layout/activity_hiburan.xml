@@ -14,6 +14,51 @@
         android:src="@drawable/homesementara"
         tools:ignore="MissingConstraints" />
 
+
+    <TextView
+        android:id="@+id/yukBelajar"
+        android:layout_width="296dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/baloo"
+        android:text="YUK BELAJAR !!!"
+        android:textAlignment="center"
+        android:textColor="@color/hitam"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <TextView
+        android:id="@+id/smgtBelajar"
+        android:layout_width="232dp"
+        android:layout_height="39dp"
+        android:fontFamily="@font/baloo"
+        android:text="Hei, Semangat Mengerjakan"
+        android:textColor="@color/hitam"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView5"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <ImageView
+        android:id="@+id/belajar_rem"
+        android:layout_width="113dp"
+        android:layout_height="136dp"
+        android:src="@drawable/singa1"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView9"
+        app:layout_constraintVertical_bias="0.262"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
         android:id="@+id/keluar1"
         android:layout_width="wrap_content"
@@ -45,10 +90,10 @@
         android:layout_width="150dp"
         android:layout_height="36dp"
         android:background="@color/biru"
+        android:fontFamily="@font/poppins"
         android:gravity="center_horizontal|center_vertical"
         android:text="Mewarnai"
         android:textColor="@color/putih"
-        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.923"
@@ -74,11 +119,11 @@
         android:id="@+id/btn_menyanyi"
         android:layout_width="150dp"
         android:layout_height="36dp"
+        android:background="@color/biru"
+        android:fontFamily="@font/poppins"
         android:gravity="center_horizontal|center_vertical"
         android:text="Menyanyi"
-        android:background="@color/biru"
         android:textColor="@color/putih"
-        android:fontFamily="@font/poppins"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.119"

@@ -39,6 +39,7 @@ class home : AppCompatActivity() {
             val intent = Intent(this, quis::class.java)
             (startActivity(intent))
         }
+        
     }
 
     private fun pindahslur(){
