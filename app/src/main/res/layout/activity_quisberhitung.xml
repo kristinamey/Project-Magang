@@ -30,6 +30,8 @@
     <TextView
         android:id="@+id/txtquismembaca"
         android:layout_width="257dp"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/hitam"
         android:layout_height="32dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -46,32 +48,32 @@
 
     <Button
         android:id="@+id/btn_soaltambah"
-        android:layout_width="178dp"
-        android:layout_height="50dp"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/soalbtnberhitung"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194"
+        app:layout_constraintVertical_bias="0.192"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_soalkurang"
-        android:layout_width="178dp"
-        android:layout_height="50dp"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/soalbtnberhitung"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194"
+        app:layout_constraintVertical_bias="0.192"
         tools:ignore="MissingConstraints" />
 
     <View
