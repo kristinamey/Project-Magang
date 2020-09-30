@@ -6,6 +6,7 @@ import android.content.Intent
 import kotlinx.android.synthetic.main.activity_home.*
 
 class home : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -21,7 +22,7 @@ class home : AppCompatActivity() {
         }
 
         btn_quiz.setOnClickListener {
-            val intent = Intent (this, quis::class.java)
+            val intent = Intent(this, quis::class.java)
             (startActivity(intent))
         }
     }

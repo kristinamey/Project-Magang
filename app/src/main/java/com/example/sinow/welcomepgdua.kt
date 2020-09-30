@@ -3,42 +3,55 @@ package com.example.sinow
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.SyncStateContract
 import android.widget.Toast
+import com.example.sinow.helper.constant
+import com.example.sinow.helper.preferenceshelper
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_welcomepgdua.*
 
 class welcomepgdua : AppCompatActivity() {
 
-    lateinit var ref: DatabaseReference
+    lateinit var sharedpref: preferenceshelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcomepgdua)
 
-        ref = FirebaseDatabase.getInstance().getReference("USERS")
-
-        btnSave.setOnClickListener {
-            savedata()
-        }
-
         btn_lanjut.setOnClickListener {
             val intent = Intent(this, home::class.java)
-            (startActivity(intent))
+            startActivity(intent)
         }
-    }
-        private fun savedata() {
-            val nama = inputnama.text.toString()
-            val umur = inputumur.text.toString()
 
-            val user = Users(nama,umur)
-            val userId = ref.push().key.toString()
+        sharedpref = preferenceshelper(this)
 
-            ref.child(userId).setValue(user).addOnCompleteListener {
-                Toast.makeText(this, "Successs",Toast.LENGTH_SHORT).show()
-                inputnama.setText("")
-                inputumur.setText("")
-
+        btnSave.setOnClickListener {
+           if (inputnama.text!!.isNotEmpty() && inputumur.text!!.isNotEmpty()){ //masih bingung harusnya inputnama.text.isnotempery
+               savesession(inputnama.text.toString(), inputumur.text.toString())
+                notif("Berhasil Masuk")
+               pindahslur()
             }
         }
     }
+    override fun onStart() {
+        super.onStart()
+        if (sharedpref.getBoolean(constant.PREF_IS_LOGIN)){
+            pindahslur()
+        }
+    }
+    private fun pindahslur(){
+        startActivity(Intent(this, home::class.java))
+        finish()
+    }
+    private fun savesession(username: String, umur: String){
+        sharedpref.put(constant.PREF_USERNAME, username)
+        sharedpref.put(constant.PREF_UMUR, umur)
+        sharedpref.put(constant.PREF_IS_LOGIN, true)
+    }
+
+    private fun notif(pesan: String){
+        Toast.makeText(applicationContext, pesan, Toast.LENGTH_SHORT).show()
+    }
+
+}
