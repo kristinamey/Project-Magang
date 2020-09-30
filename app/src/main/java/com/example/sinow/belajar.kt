@@ -14,6 +14,7 @@ class belajar : AppCompatActivity() {
             val intent = Intent(this, utamabelajarangka::class.java)
             (startActivity(intent))
         }
+
         btn_mengenal_huruf.setOnClickListener {
             val intent = Intent (this, utamabelajarhuruf::class.java)
             (startActivity(intent))
@@ -23,9 +24,15 @@ class belajar : AppCompatActivity() {
             val intent = Intent(this, utamamembaca::class.java)
             (startActivity(intent))
         }
+
         btn_mengenal_warna.setOnClickListener {
             val intent = Intent(this, mengenalwarna::class.java)
             (startActivity(intent))
+        }
+
+        keluar2.setOnClickListener {
+            val intent = Intent(this, home::class.java)
+            startActivity(intent)
         }
         }
     }

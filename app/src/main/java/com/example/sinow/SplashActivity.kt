@@ -17,7 +17,7 @@ class SplashActivity : Activity() {
             val intent = Intent(this@SplashActivity, welcomepgdua::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 2000)
 
     }
 }

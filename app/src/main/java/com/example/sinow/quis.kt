@@ -18,5 +18,9 @@ class quis : AppCompatActivity() {
             val intent = Intent(this, quismembaca::class.java)
             (startActivity(intent))
         }
+        keluar.setOnClickListener {
+            val intent = Intent(this, home::class.java)
+            startActivity(intent)
+        }
     }
 }
