@@ -14,21 +14,6 @@
         android:src="@drawable/welcome"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btn_lanjut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="btn_lanjut"
-        android:text="Next sementara"
-        android:fontFamily="@font/poppins"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116"
-        tools:ignore="MissingConstraints" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"

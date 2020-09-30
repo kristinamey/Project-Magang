@@ -19,11 +19,6 @@ class welcomepgdua : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcomepgdua)
 
-        btn_lanjut.setOnClickListener {
-            val intent = Intent(this, home::class.java)
-            startActivity(intent)
-        }
-
         sharedpref = preferenceshelper(this)
 
         btnSave.setOnClickListener {
