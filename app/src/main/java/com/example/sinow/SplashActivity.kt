@@ -1,11 +1,12 @@
 package com.example.sinow
 
 import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.content.Intent
 
-class SplashActivity : Activity(){
+class SplashActivity : Activity() {
+    
     lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,9 +14,10 @@ class SplashActivity : Activity(){
 
         handler = Handler()
         handler.postDelayed({
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            val intent = Intent(this@SplashActivity, welcomepgdua::class.java)
             startActivity(intent)
             finish()
-        },3000)
+        }, 3000)
+
     }
 }
