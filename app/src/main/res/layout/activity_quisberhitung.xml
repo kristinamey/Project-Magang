@@ -124,7 +124,6 @@
         android:id="@+id/btn_jawaban3"
         android:layout_width="114dp"
         android:layout_height="45dp"
-
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/kotakquisberhitung"

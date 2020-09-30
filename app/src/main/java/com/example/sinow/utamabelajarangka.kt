@@ -3,7 +3,9 @@ package com.example.sinow
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_quis.*
 import kotlinx.android.synthetic.main.activity_utamabelajarangka.*
+import kotlinx.android.synthetic.main.activity_utamabelajarangka.keluar
 
 class utamabelajarangka : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +23,10 @@ class utamabelajarangka : AppCompatActivity() {
         btn_level3.setOnClickListener {
             val intent = Intent(this, belajarangkalevel3::class.java)
             (startActivity(intent))
+        }
+        keluar.setOnClickListener {
+            val intent = Intent(this, belajar::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -50,6 +50,51 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.468" />
 
+
+    <TextView
+        android:id="@+id/yukBelajar"
+        android:layout_width="296dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/baloo"
+        android:text="YUK BELAJAR !!!"
+        android:textAlignment="center"
+        android:textColor="@color/hitam"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/smgtBelajar"
+        android:layout_width="268dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="620dp"
+        android:fontFamily="@font/baloo"
+        android:text="Hei, Semangat Mengerjakan"
+        android:textColor="@color/hitam"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView5"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <ImageView
+        android:id="@+id/belajar_rem"
+        android:layout_width="113dp"
+        android:layout_height="136dp"
+        android:src="@drawable/singa1"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView9"
+        app:layout_constraintVertical_bias="0.262"
+        tools:ignore="MissingConstraints" />
     <Button
         android:id="@+id/btn_quismembaca"
         android:layout_width="147dp"
