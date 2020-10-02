@@ -15,7 +15,11 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
+<<<<<<< HEAD
         android:id="@+id/keluar4"
+=======
+        android:id="@+id/keluar3"
+>>>>>>> 5a3863719eae78b8e6b78c47db014ab042e6f2c0
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/keluar"
