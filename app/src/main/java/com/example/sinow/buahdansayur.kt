@@ -11,8 +11,7 @@ class buahdansayur : AppCompatActivity() {
         setContentView(R.layout.activity_buahdansayur)
 
         keluar.setOnClickListener {
-            val intent = Intent(this, utamamembaca::class.java)
-            startActivity(intent)
+onBackPressed()
         }
     }
 }

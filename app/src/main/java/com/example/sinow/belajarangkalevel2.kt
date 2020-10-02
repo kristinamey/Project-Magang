@@ -11,8 +11,7 @@ class belajarangkalevel2 : AppCompatActivity() {
         setContentView(R.layout.activity_belajarangkalevel2)
 
         keluar.setOnClickListener {
-            val intent = Intent(this, utamabelajarangka::class.java)
-            startActivity(intent)
+onBackPressed()
         }
     }
 }

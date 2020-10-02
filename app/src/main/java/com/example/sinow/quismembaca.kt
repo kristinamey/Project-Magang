@@ -11,8 +11,7 @@ class quismembaca : AppCompatActivity() {
         setContentView(R.layout.activity_quismembaca)
 
         keluar.setOnClickListener {
-            val intent = Intent(this, quis::class.java)
-            startActivity(intent)
+onBackPressed()
         }
     }
 }

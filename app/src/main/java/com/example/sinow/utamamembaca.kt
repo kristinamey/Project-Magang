@@ -22,8 +22,7 @@ class utamamembaca : AppCompatActivity() {
             (startActivity(intent))
         }
         keluar.setOnClickListener {
-            val intent = Intent(this, belajar::class.java)
-            startActivity(intent)
+onBackPressed()
         }
     }
 }

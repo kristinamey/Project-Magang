@@ -31,8 +31,9 @@ class belajar : AppCompatActivity() {
         }
 
         keluar2.setOnClickListener {
-            val intent = Intent(this, home::class.java)
-            startActivity(intent)
+            onBackPressed()
+//            val intent = Intent(this, home::class.java)
+//            startActivity(intent)
         }
         }
     }
