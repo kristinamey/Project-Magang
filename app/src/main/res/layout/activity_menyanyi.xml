@@ -34,6 +34,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
+        android:id="@+id/keluar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/keluar"
@@ -45,7 +46,7 @@
         app:layout_constraintVertical_bias="0.026"
         tools:ignore="MissingConstraints" />
 
-    <View
+    <Button
         android:id="@+id/kotak1"
         android:layout_width="120dp"
         android:layout_height="60dp"
@@ -60,7 +61,7 @@
         app:layout_constraintVertical_bias="0.318"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/nyanyi1"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -73,7 +74,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.24" />
 
-    <View
+    <Button
         android:id="@+id/kotak2"
         android:layout_width="120dp"
         android:layout_height="60dp"
@@ -87,7 +88,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.318" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/nyanyi2"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -101,7 +102,7 @@
         app:layout_constraintVertical_bias="0.24"
         tools:ignore="MissingConstraints" />
 
-    <View
+    <Button
         android:id="@+id/kotak3"
         android:layout_width="120dp"
         android:layout_height="60dp"
@@ -116,7 +117,7 @@
         app:layout_constraintVertical_bias="0.551"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/nyanyi3"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -130,7 +131,7 @@
         app:layout_constraintVertical_bias="0.483"
         tools:ignore="MissingConstraints" />
 
-    <View
+    <Button
         android:id="@+id/kotak4"
         android:layout_width="120dp"
         android:layout_height="60dp"
@@ -145,7 +146,7 @@
         app:layout_constraintVertical_bias="0.551"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/nyanyi4"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -159,7 +160,7 @@
         app:layout_constraintVertical_bias="0.483"
         tools:ignore="MissingConstraints" />
 
-    <View
+    <Button
         android:id="@+id/kotak5"
         android:layout_width="120dp"
         android:layout_height="60dp"
@@ -174,7 +175,7 @@
         app:layout_constraintVertical_bias="0.794"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/nyanyi5"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -188,7 +189,7 @@
         app:layout_constraintVertical_bias="0.738"
         tools:ignore="MissingConstraints" />
 
-    <View
+    <Button
         android:id="@+id/kotak6"
         android:layout_width="120dp"
         android:layout_height="60dp"
@@ -203,7 +204,7 @@
         app:layout_constraintVertical_bias="0.794"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/nyanyi6"
         android:layout_width="100dp"
         android:layout_height="100dp"
