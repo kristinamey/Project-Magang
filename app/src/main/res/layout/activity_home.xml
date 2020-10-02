@@ -34,7 +34,7 @@
         android:layout_width="246dp"
         android:layout_height="32dp"
         android:fontFamily="@font/baloo"
-        android:textSize="15dp"
+        
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.218"

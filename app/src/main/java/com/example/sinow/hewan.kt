@@ -10,8 +10,7 @@ class hewan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hewan)
         keluar.setOnClickListener {
-            val intent = Intent(this, utamamembaca::class.java)
-            startActivity(intent)
+onBackPressed()
         }
     }
 }
