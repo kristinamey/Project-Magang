@@ -19,8 +19,7 @@ class quis : AppCompatActivity() {
             (startActivity(intent))
         }
         keluar.setOnClickListener {
-            val intent = Intent(this, home::class.java)
-            startActivity(intent)
+onBackPressed()
         }
     }
 }

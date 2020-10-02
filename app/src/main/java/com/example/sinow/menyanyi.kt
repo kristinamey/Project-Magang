@@ -11,8 +11,9 @@ class menyanyi : AppCompatActivity() {
         setContentView(R.layout.activity_menyanyi)
 
         keluar3.setOnClickListener {
-            val intent = Intent(this, hiburan::class.java)
-            startActivity(intent)
+            onBackPressed()
+//            val intent = Intent(this, hiburan::class.java)
+//            startActivity(intent)
         }
     }
 }

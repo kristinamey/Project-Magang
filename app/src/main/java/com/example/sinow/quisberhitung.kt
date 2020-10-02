@@ -11,8 +11,7 @@ class quisberhitung : AppCompatActivity() {
         setContentView(R.layout.activity_quisberhitung)
 
         keluar.setOnClickListener {
-            val intent = Intent(this, quis::class.java)
-            startActivity(intent)
+onBackPressed()
         }
     }
 }

@@ -22,9 +22,11 @@ class hiburan : AppCompatActivity() {
             val intent = Intent(this, mewarnai::class.java)
             (startActivity(intent))
         }
+
         keluar1.setOnClickListener {
-            val intent = Intent(this, home::class.java)
-            (startActivity(intent))
+onBackPressed()
+//            val intent = Intent(this, home::class.java)
+//            (startActivity(intent))
         }
     }
 }

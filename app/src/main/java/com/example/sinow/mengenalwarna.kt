@@ -10,8 +10,7 @@ class mengenalwarna : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mengenalwarna)
         keluar.setOnClickListener {
-            val intent = Intent(this, belajar::class.java)
-            startActivity(intent)
+onBackPressed()
         }
     }
 }
