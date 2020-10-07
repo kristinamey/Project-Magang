@@ -39,6 +39,19 @@ class home : AppCompatActivity() {
             val intent = Intent(this, quis::class.java)
             (startActivity(intent))
         }
+        belajar_rem.setOnClickListener {
+            val intent = Intent (this,belajar::class.java)
+            (startActivity(intent))
+        }
+        hiburan_rem.setOnClickListener {
+            val intent = Intent(this, hiburan::class.java)
+            (startActivity(intent))
+        }
+        button_quiz.setOnClickListener {
+            val intent = Intent(this, quis::class.java)
+            (startActivity(intent))
+        }
+
         
     }
 
