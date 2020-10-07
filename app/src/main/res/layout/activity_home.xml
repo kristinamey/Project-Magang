@@ -29,20 +29,6 @@
         app:layout_constraintVertical_bias="0.023"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/callnama"
-        android:layout_width="246dp"
-        android:layout_height="32dp"
-        android:fontFamily="@font/baloo"
-        
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068"
-        tools:ignore="MissingConstraints" />
-
     <ImageView
         android:id="@+id/belajar_rem"
         android:layout_width="95dp"
@@ -57,36 +43,51 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:layout_width="202dp"
-        android:layout_height="33dp"
+        android:layout_width="349dp"
+        android:layout_height="39dp"
         android:fontFamily="@font/baloo"
         android:text="SELAMAT DATANG"
         android:textColor="@color/hitam"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/callnama"
+        android:layout_width="346dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/hitam"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/pilih_menu_"
-        android:layout_width="298dp"
-        android:layout_height="33dp"
-        android:fontFamily="@font/baloo"
-        android:text="Pilih Menu yang kamu inginkan"
+        android:layout_width="423dp"
+        android:layout_height="32dp"
+        android:fontFamily="@font/poppins"
+        android:text="Pilih Menu yang Kamu Inginkan"
         android:textAlignment="center"
         android:textColor="@color/hitam"
         android:textSize="20dp"
-        android:textStyle="normal"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/gifImageView9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gifImageView9"
-        app:layout_constraintVertical_bias="0.164"
+        app:layout_constraintVertical_bias="0.153"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -146,7 +147,7 @@
         app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672"
+        app:layout_constraintVertical_bias="0.665"
         tools:ignore="MissingConstraints" />
 
     <Button
