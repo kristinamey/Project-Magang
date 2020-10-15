@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment_tab1quisberhitung">
+
+    <ImageView
+        android:id="@+id/viewsoalberhitungplus"
+        android:layout_width="260dp"
+        android:layout_height="138dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.131"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/viewsoalberhitungplus"
+        android:layout_marginTop="30dp"
+        android:layout_width="415dp"
+        android:layout_height="181dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:ignore="MissingConstraints"
+        tools:itemCount="4"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="412dp"
+        tools:listitem="@layout/itembtnquisberhitung" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

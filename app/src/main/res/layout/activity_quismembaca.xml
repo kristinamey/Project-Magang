@@ -47,19 +47,6 @@
         app:layout_constraintVertical_bias="0.287"
         tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/txtpertanyaan"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/gifImageView6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46"
-        tools:ignore="MissingConstraints" />
-
     <ImageView
         android:id="@+id/keluar"
         android:layout_width="40dp"
@@ -134,12 +121,13 @@
 <!--        app:layout_constraintVertical_bias="0.737" />-->
 
     <androidx.recyclerview.widget.RecyclerView
-        app:layout_constraintTop_toBottomOf="@+id/txtpertanyaan"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sound"
         app:spanCount="2"
         tools:itemCount="4"
         tools:listitem="@layout/itembtnquismembaca" />

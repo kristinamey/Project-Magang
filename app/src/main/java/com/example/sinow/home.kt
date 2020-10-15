@@ -51,8 +51,10 @@ class home : AppCompatActivity() {
             val intent = Intent(this, quis::class.java)
             (startActivity(intent))
         }
-
-        
+        feedbackform.setOnClickListener {
+            val intent = Intent(this, feedback::class.java)
+            (startActivity(intent))
+        }
     }
 
     private fun pindahslur(){
