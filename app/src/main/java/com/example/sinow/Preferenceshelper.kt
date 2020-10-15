@@ -1,4 +1,4 @@
-package com.example.sinow.helper
+package com.example.sinow
 
 import android.content.Context
 import android.content.SharedPreferences

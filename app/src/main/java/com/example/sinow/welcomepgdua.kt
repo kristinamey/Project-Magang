@@ -3,12 +3,7 @@ package com.example.sinow
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.SyncStateContract
 import android.widget.Toast
-import com.example.sinow.helper.constant
-import com.example.sinow.helper.preferenceshelper
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_welcomepgdua.*
 
 class welcomepgdua : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.sinow.helper
+package com.example.sinow
 
 class constant {
     companion object {

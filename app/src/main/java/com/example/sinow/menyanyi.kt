@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_menyanyi.*
 
 class menyanyi : AppCompatActivity() {
 
-    val adapteritemmenyanyi : Adapteritembtnmenyanyi by Lazy (LazyThreadSafetyMode.NONE){
+    val adapteritemmenyanyi : Adapteritembtnmenyanyi by lazy (LazyThreadSafetyMode.NONE){
         Adapteritembtnmenyanyi(::tombol)
     }
 

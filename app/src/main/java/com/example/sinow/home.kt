@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Toast
-import com.example.sinow.helper.constant
-import com.example.sinow.helper.preferenceshelper
 import kotlinx.android.synthetic.main.activity_home.*
 
 class home : AppCompatActivity() {
