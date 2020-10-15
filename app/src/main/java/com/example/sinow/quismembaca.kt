@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_quis.*
 
 class quismembaca : AppCompatActivity() {
 
-    val adapteritemmembaca : Adapteritembtnquismembaca by Lazy (LazyThreadSafetyMode.NONE){
+    val adapteritemmembaca : Adapteritembtnquismembaca by lazy (LazyThreadSafetyMode.NONE){
         Adapteritembtnquismembaca(::tombol)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
