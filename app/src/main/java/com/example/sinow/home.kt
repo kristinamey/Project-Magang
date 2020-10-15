@@ -50,7 +50,6 @@ class home : AppCompatActivity() {
             (startActivity(intent))
         }
 
-        
     }
 
     private fun pindahslur(){
