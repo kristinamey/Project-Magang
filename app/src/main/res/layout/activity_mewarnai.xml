@@ -46,177 +46,190 @@
         app:layout_constraintVertical_bias="0.067"
         tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/kotak1"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/kotakmewarnai"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.195"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285" />
+<!--    <View-->
+<!--        android:id="@+id/kotak1"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@drawable/kotakmewarnai"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.195"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.285" />-->
 
-    <ImageView
-        android:id="@+id/warna1"
-        android:layout_width="85dp"
-        android:layout_height="84dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.235"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291"
-        tools:ignore="MissingConstraints" />
+<!--    <ImageView-->
+<!--        android:id="@+id/warna1"-->
+<!--        android:layout_width="85dp"-->
+<!--        android:layout_height="84dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.235"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.291"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <View
-        android:id="@+id/kotak2"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/kotakmewarnai"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.787"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285"
-        tools:ignore="MissingConstraints" />
+<!--    <View-->
+<!--        android:id="@+id/kotak2"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@drawable/kotakmewarnai"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.787"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.285"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <ImageView
-        android:id="@+id/warna2"
-        android:layout_width="85dp"
-        android:layout_height="84dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
-        app:layout_constraintVertical_bias="0.291"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+<!--    <ImageView-->
+<!--        android:id="@+id/warna2"-->
+<!--        android:layout_width="85dp"-->
+<!--        android:layout_height="84dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.76"-->
+<!--        app:layout_constraintVertical_bias="0.291"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <View
-        android:id="@+id/kotak3"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/kotakmewarnai"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/gifImageView5"
-        app:layout_constraintHorizontal_bias="0.195"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527"
-        tools:ignore="MissingConstraints" />
+<!--    <View-->
+<!--        android:id="@+id/kotak3"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@drawable/kotakmewarnai"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/gifImageView5"-->
+<!--        app:layout_constraintHorizontal_bias="0.195"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.527"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <ImageView
-        android:id="@+id/warna3"
-        android:layout_width="85dp"
-        android:layout_height="84dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.235"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521"
-        tools:ignore="MissingConstraints" />
+<!--    <ImageView-->
+<!--        android:id="@+id/warna3"-->
+<!--        android:layout_width="85dp"-->
+<!--        android:layout_height="84dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.235"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.521"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <View
-        android:id="@+id/kotak4"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/kotakmewarnai"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.787"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527"
-        tools:ignore="MissingConstraints" />
+<!--    <View-->
+<!--        android:id="@+id/kotak4"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@drawable/kotakmewarnai"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.787"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.527"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <ImageView
-        android:id="@+id/warna4"
-        android:layout_width="85dp"
-        android:layout_height="84dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521"
-        tools:ignore="MissingConstraints" />
+<!--    <ImageView-->
+<!--        android:id="@+id/warna4"-->
+<!--        android:layout_width="85dp"-->
+<!--        android:layout_height="84dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.76"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.521"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <View
-        android:id="@+id/kotak5"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/kotakmewarnai"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.195"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762"
-        tools:ignore="MissingConstraints" />
+<!--    <View-->
+<!--        android:id="@+id/kotak5"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@drawable/kotakmewarnai"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.195"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.762"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <ImageView
-        android:id="@+id/warna5"
-        android:layout_width="85dp"
-        android:layout_height="84dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/gifImageView5"
-        app:layout_constraintHorizontal_bias="0.235"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755"
-        tools:ignore="MissingConstraints" />
+<!--    <ImageView-->
+<!--        android:id="@+id/warna5"-->
+<!--        android:layout_width="85dp"-->
+<!--        android:layout_height="84dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/gifImageView5"-->
+<!--        app:layout_constraintHorizontal_bias="0.235"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.755"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <View
-        android:id="@+id/kotak6"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/kotakmewarnai"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/gifImageView5"
-        app:layout_constraintHorizontal_bias="0.787"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762"
-        tools:ignore="MissingConstraints" />
+<!--    <View-->
+<!--        android:id="@+id/kotak6"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="@drawable/kotakmewarnai"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/gifImageView5"-->
+<!--        app:layout_constraintHorizontal_bias="0.787"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.762"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <ImageView
-        android:id="@+id/warna6"
-        android:layout_width="85dp"
-        android:layout_height="84dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755"
-        tools:ignore="MissingConstraints" />
+<!--    <ImageView-->
+<!--        android:id="@+id/warna6"-->
+<!--        android:layout_width="85dp"-->
+<!--        android:layout_height="84dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.76"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.755"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+ <androidx.recyclerview.widget.RecyclerView
+     app:layout_constraintTop_toBottomOf="@+id/Mewarnai"
+     app:layout_constraintLeft_toLeftOf="parent"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+     app:spanCount="2"
+     tools:itemCount="13"
+     tools:listitem="@layout/itembtnmewarnai"
+
+     />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
