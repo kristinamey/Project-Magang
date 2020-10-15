@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_menyanyi.*
 
 class mewarnai : AppCompatActivity() {
 
-    val adapteritemmewarnai : Adapteritembtnmewarnai by Lazy(LazyThreadSafetyMode.NONE){
+    val adapteritemmewarnai : Adapteritembtnmewarnai by lazy (LazyThreadSafetyMode.NONE){
         Adapteritembtnmewarnai(::tombol)
     }
 
