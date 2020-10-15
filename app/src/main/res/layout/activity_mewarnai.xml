@@ -60,7 +60,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.285" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/warna1"
         android:layout_width="85dp"
         android:layout_height="84dp"
@@ -89,7 +89,7 @@
         app:layout_constraintVertical_bias="0.285"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/warna2"
         android:layout_width="85dp"
         android:layout_height="84dp"
@@ -118,7 +118,7 @@
         app:layout_constraintVertical_bias="0.527"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/warna3"
         android:layout_width="85dp"
         android:layout_height="84dp"
@@ -147,7 +147,7 @@
         app:layout_constraintVertical_bias="0.527"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/warna4"
         android:layout_width="85dp"
         android:layout_height="84dp"
@@ -176,7 +176,7 @@
         app:layout_constraintVertical_bias="0.762"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/warna5"
         android:layout_width="85dp"
         android:layout_height="84dp"
@@ -205,7 +205,7 @@
         app:layout_constraintVertical_bias="0.762"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/warna6"
         android:layout_width="85dp"
         android:layout_height="84dp"
@@ -218,6 +218,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.755"
         tools:ignore="MissingConstraints" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
