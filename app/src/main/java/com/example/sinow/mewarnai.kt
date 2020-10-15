@@ -6,14 +6,20 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_menyanyi.*
 
 class mewarnai : AppCompatActivity() {
+
+    val adapteritemmewarnai : Adapteritembtnmewarnai by Lazy(LazyThreadSafetyMode.NONE){
+        Adapteritembtnmewarnai(::tombol)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mewarnai)
 
         keluar3.setOnClickListener {
             onBackPressed()
-//            val intent = Intent(this, hiburan::class.java)
-//            startActivity(intent)
         }
+    }
+    private fun tombol(Data: String){
+
     }
 }
