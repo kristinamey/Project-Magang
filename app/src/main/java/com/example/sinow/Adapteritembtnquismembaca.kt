@@ -4,12 +4,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sinow.R
+import com.example.sinow.model.ModelHuruf
 import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.itembtnquismembaca.view.*
 
-class Adapteritembtnquismembaca(private val onClick:(String) -> Unit)
+class Adapteritembtnquismembaca(private val onClick:(ModelHuruf) -> Unit)
     : RecyclerView.Adapter<Adapteritembtnquismembaca.ViewHolder>() {
 
-    var items : List<String> = emptyList()
+    var items : List<ModelHuruf> = emptyList()
     set(value) {
         field = value
         notifyDataSetChanged()
@@ -26,6 +28,10 @@ class Adapteritembtnquismembaca(private val onClick:(String) -> Unit)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = items[position]
         with(holder.itemView){
+            quis4.text=data.huruf
+            quis4.setOnClickListener {
+                onClick(items[holder.adapterPosition])
+            }
         }
     }
 

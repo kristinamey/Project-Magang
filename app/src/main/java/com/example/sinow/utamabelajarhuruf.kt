@@ -1,15 +1,24 @@
 package com.example.sinow
 
+import android.app.ProgressDialog
 import android.content.Intent
+import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.sinow.api.RequestHandler
+import com.example.sinow.model.ModelHuruf
+import com.google.gson.Gson
+import com.google.gson.JsonArray
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_quis.*
 import kotlinx.android.synthetic.main.activity_quis.keluar
 import kotlinx.android.synthetic.main.activity_utamabelajarhuruf.*
+import org.json.JSONException
+import org.json.JSONObject
 
 class utamabelajarhuruf : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,5 +59,4 @@ class utamabelajarhuruf : AppCompatActivity() {
         override fun getCount(): Int {
             return fragmentlist.size
         }
-    }
 }
