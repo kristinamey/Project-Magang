@@ -11,7 +11,7 @@ class buahdansayur : AppCompatActivity() {
         setContentView(R.layout.activity_buahdansayur)
 
         keluar.setOnClickListener {
-onBackPressed()
+            onBackPressed()
         }
     }
 }
