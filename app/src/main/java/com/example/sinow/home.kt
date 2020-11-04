@@ -50,6 +50,11 @@ class home : AppCompatActivity() {
             (startActivity(intent))
         }
 
+        feedbackform.setOnClickListener {
+            val intent = Intent(this, feedback::class.java)
+            (startActivity(intent))
+        }
+
     }
 
     private fun pindahslur(){

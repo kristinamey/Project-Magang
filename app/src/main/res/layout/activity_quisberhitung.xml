@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quisberhitung">
+    tools:context="com.example.sinow.quisberhitung">
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView6"
@@ -28,7 +28,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/txtquismembaca"
+        android:id="@+id/txtquisberhitung"
         android:layout_width="257dp"
         android:fontFamily="@font/baloo"
         android:textColor="@color/hitam"
@@ -46,49 +46,59 @@
         app:layout_constraintVertical_bias="0.064"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btn_soaltambah"
-        android:layout_width="135dp"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/soalbtnberhitung"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192"
-        tools:ignore="MissingConstraints" />
+    <FrameLayout
+        android:id="@+id/tabbehitung"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtquisberhitung"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
 
-    <Button
-        android:id="@+id/btn_soalkurang"
-        android:layout_width="135dp"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/soalbtnberhitung"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192"
-        tools:ignore="MissingConstraints" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/buttontabberhitung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <View
-        android:id="@+id/viewsoalberhitung"
-        android:layout_width="260dp"
-        android:layout_height="138dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="#00000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408"
-        tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/group_min"
+                android:background="@drawable/custom_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/group_plus"
+                android:background="@drawable/custom_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginLeft="245dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/rectangle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewquisberhitung1"
+        app:layout_constraintTop_toBottomOf="@+id/tabbehitung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 <!--    <Button-->
 <!--        android:id="@+id/btn_jawaban1"-->
@@ -150,16 +160,16 @@
 <!--        app:layout_constraintVertical_bias="0.774"-->
 <!--        tools:ignore="MissingConstraints" />-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="415dp"
-        android:layout_height="181dp"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:ignore="MissingConstraints"
-        tools:itemCount="4"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="412dp"
-        tools:listitem="@layout/itembtnquisberhitung" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="415dp"-->
+<!--        android:layout_height="181dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+<!--        app:spanCount="2"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:itemCount="4"-->
+<!--        tools:layout_editor_absoluteX="-4dp"-->
+<!--        tools:layout_editor_absoluteY="412dp"-->
+<!--        tools:listitem="@layout/itembtnquisberhitung" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

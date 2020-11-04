@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +7,28 @@
     tools:context=".utamabelajarhuruf">
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView3"
+        android:id="@+id/gifImageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        android:src="@drawable/homesementara"
+        android:src="@drawable/welcome"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="257dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Mengenal Huruf"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
 
     <ImageView
         android:id="@+id/keluar"
@@ -27,59 +42,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.026" />
 
-    <TextView
-        android:id="@+id/txtmengenalhuruf"
-        android:layout_width="257dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="38dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Mengenal Huruf"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:fontFamily="@font/baloo"
+    <Button
+        android:id="@+id/btn_level1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEVEL 1"
+        android:fontFamily="@font/poppins"
+        android:background="@color/orenangka"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.628"
+        tools:ignore="MissingConstraints" />
 
-    <FrameLayout
-        android:id="@+id/tab"
-        app:layout_constraintTop_toBottomOf="@+id/txtmengenalhuruf"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+    <Button
+        android:id="@+id/btn_level2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEVEL 2"
+        android:background="@color/orenangka"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
+        tools:ignore="MissingConstraints" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/buttontab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <Button
-                android:id="@+id/group_kiri"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
-
-            <Button
-                android:id="@+id/group_kanan"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
-        </LinearLayout>
-    </FrameLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewmengenalhuruf1"
-        app:layout_constraintTop_toBottomOf="@+id/tab"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+    <Button
+        android:id="@+id/btn_level3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEVEL 3"
+        android:fontFamily="@font/poppins"
+        android:background="@color/orenangka"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="@+id/gifImageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.246"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
