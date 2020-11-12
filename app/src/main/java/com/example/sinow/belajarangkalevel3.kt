@@ -31,6 +31,7 @@ class belajarangkalevel3 : AppCompatActivity() {
     var JSON_STRING = ""
     var next_page = ""
     var prev_page_url = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_belajarangkalevel3)

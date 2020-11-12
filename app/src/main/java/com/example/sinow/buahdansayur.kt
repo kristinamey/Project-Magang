@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.core.content.ContentProviderCompat
+import androidx.core.view.isVisible
 import coil.ImageLoader
 import coil.api.load
 import coil.decode.SvgDecoder
@@ -20,17 +21,30 @@ import kotlinx.android.synthetic.main.activity_buahdansayur.*
 import kotlinx.android.synthetic.main.activity_hewan.*
 import kotlinx.android.synthetic.main.activity_quis.*
 import kotlinx.android.synthetic.main.activity_quis.keluar
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlinx.android.synthetic.main.activity_buahdansayur.back as back1
+import kotlinx.android.synthetic.main.activity_buahdansayur.next as next1
+import kotlinx.android.synthetic.main.activity_hewan.back as back1
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.next as next1
 
 class buahdansayur : AppCompatActivity() {
     var JSON_STRING = ""
+    var next_page = ""
+    var prev_page_url = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buahdansayur)
         getJSON()
+        next.setOnClickListener {
+            getJSONnextPage()
+        }
+        back.setOnClickListener {
+            getJSONprevPage()
+        }
 
         keluar.setOnClickListener {
             onBackPressed()
@@ -40,12 +54,22 @@ class buahdansayur : AppCompatActivity() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
             val json = jsonObject.getJSONObject("data")
-            val next_page = jsonObject.getString("next_page_url")
-            val prev_page_url = jsonObject.getString("prev_page_url")
+
+            prev_page_url = json.getString("prev_page_url")
+            next_page = json.getString("next_page_url")
+            if (!json.getString("next_page_url").isNullOrEmpty()){
+                next.isVisible=true
+            }
+            if (json.getString("prev_page_url").isNullOrEmpty()){
+                back.isVisible =false
+            } else {
+                back.isVisible =true
+            }
+
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
-            gambar_buah.loadSvgOrOthers(data[0].gambar)
+            gambarbuah.loadSvgOrOthers(data[0].gambar)
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -77,6 +101,122 @@ class buahdansayur : AppCompatActivity() {
             override fun doInBackground(vararg params: Void?): String {
                 val rh = RequestHandler()
                 return rh.sendGetRequest("${resources.getString(R.string.base_url)}api/membaca?tipe=buah")
+            }
+        }
+
+        val gj = GetJSON()
+        gj.execute()
+    }
+
+    private fun showNextPage() {
+        try {
+            val jsonObject = JSONObject(JSON_STRING)
+            val json = jsonObject.getJSONObject("data")
+
+            prev_page_url=json.getString("prev_page_url")
+            next_page=json.getString("next_page_url")
+            if (!json.getString("next_page_url").isNullOrEmpty()){
+                next.isVisible=true
+            }
+            if (json.getString("prev_page_url").isNullOrEmpty()){
+                back.isVisible =false
+            } else {
+                back.isVisible =true
+            }
+
+            val hasil = json.getString("data")
+            val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
+            val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
+            gambarbuah.loadSvgOrOthers(data[0].gambar)
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun getJSONnextPage() {
+        class GetJSON :
+            AsyncTask<Void?, Void?, String>() {
+
+            var loading: ProgressDialog? = null
+            override fun onPreExecute() {
+                super.onPreExecute()
+                loading = ProgressDialog.show(
+                    this@buahdansayur,
+                    "Sedang memproses...",
+                    "Tunggu...",
+                    false,
+                    false
+                )
+            }
+
+            override fun onPostExecute(s: String) {
+                super.onPostExecute(s)
+                loading!!.dismiss()
+                JSON_STRING = s
+                showNextPage()
+            }
+
+            override fun doInBackground(vararg params: Void?): String {
+                val rh = RequestHandler()
+                return rh.sendGetRequest(next_page)
+            }
+        }
+
+        val gj = GetJSON()
+        gj.execute()
+    }
+
+    private fun showPrevPage() {
+        try {
+            val jsonObject = JSONObject(JSON_STRING)
+            val json = jsonObject.getJSONObject("data")
+
+            prev_page_url=json.getString("prev_page_url")
+            next_page=json.getString("next_page_url")
+            if (!json.getString("next_page_url").isNullOrEmpty()){
+                next.isVisible=true
+            }
+            if (json.getString("prev_page_url").isNullOrEmpty()){
+                back.isVisible =false
+            } else {
+                back.isVisible =true
+            }
+
+            val hasil = json.getString("data")
+            val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
+            val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
+            gambarbuah.loadSvgOrOthers(data[0].gambar)
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun getJSONprevPage() {
+        class GetJSON :
+            AsyncTask<Void?, Void?, String>() {
+
+            var loading: ProgressDialog? = null
+            override fun onPreExecute() {
+                super.onPreExecute()
+                loading = ProgressDialog.show(
+                    this@buahdansayur,
+                    "Sedang memproses...",
+                    "Tunggu...",
+                    false,
+                    false
+                )
+            }
+
+            override fun onPostExecute(s: String) {
+                super.onPostExecute(s)
+                loading!!.dismiss()
+                JSON_STRING = s
+                showPrevPage()
+            }
+
+            override fun doInBackground(vararg params: Void?): String {
+                val rh = RequestHandler()
+                return rh.sendGetRequest(prev_page_url)
             }
         }
 

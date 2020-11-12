@@ -20,44 +20,42 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_belajarangkalevel3.*
 import kotlinx.android.synthetic.main.activity_hewan.*
-import kotlinx.android.synthetic.main.activity_quis.*
 import kotlinx.android.synthetic.main.activity_quis.keluar
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
-import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.gambar_huruf
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlinx.android.synthetic.main.activity_hewan.back as back1
-import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.next as next1
+import kotlinx.android.synthetic.main.activity_hewan.back as back1
+import kotlinx.android.synthetic.main.activity_hewan.next as next1
 
 class hewan : AppCompatActivity() {
     var JSON_STRING = ""
     var next_page = ""
     var prev_page_url = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hewan)
         getJSON()
-        next.setOnClickListener {
-            getJSONnextPage()
-        }
-        back.setOnClickListener {
-            getJSONprevPage()
-        }
-
+            next.setOnClickListener {
+                getJSONnextPage()
+            }
+            back.setOnClickListener {
+                getJSONprevPage()
+            }
         keluar.setOnClickListener {
         onBackPressed()
         }
     }
-
-    private fun showEmployee() {
+    private fun showEmploye1() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
             val json = jsonObject.getJSONObject("data")
 
-            prev_page_url = jsonObject.getString("prev_page_url")
-            next_page = jsonObject.getString("next_page_url")
+            prev_page_url=json.getString("prev_page_url")
+            next_page=json.getString("next_page_url")
             if (!json.getString("next_page_url").isNullOrEmpty()){
                 next.isVisible=true
             }
@@ -70,7 +68,7 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambar_hewan.loadSvgOrOthers(data[0].gambar)
+            gambarhewan.loadSvgOrOthers(data[0].gambar)
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -96,7 +94,7 @@ class hewan : AppCompatActivity() {
                 super.onPostExecute(s)
                 loading!!.dismiss()
                 JSON_STRING = s
-                showEmployee()
+                showEmploye1()
             }
 
             override fun doInBackground(vararg params: Void?): String {
@@ -108,6 +106,7 @@ class hewan : AppCompatActivity() {
         val gj = GetJSON()
         gj.execute()
     }
+
 
     private fun showNextPage() {
         try {
@@ -128,7 +127,7 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambar_hewan.loadSvgOrOthers(data[0].gambar)
+            gambarhewan.loadSvgOrOthers(data[0].gambar)
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -186,7 +185,7 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambar_hewan.loadSvgOrOthers(data[0].gambar)
+            gambarhewan.loadSvgOrOthers(data[0].gambar)
         } catch (e: JSONException) {
             e.printStackTrace()
         }
