@@ -128,7 +128,6 @@ class Fragment_tab1mengenalhuruf : Fragment() {
         gj.execute()
     }
 
-
     private fun showNextPage() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
@@ -202,7 +201,6 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             } else {
                 back.isVisible =true
             }
-
 
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHuruf>>() {}.type
