@@ -33,6 +33,7 @@ class Fragment_tab1mengenalhuruf : Fragment() {
     private var param2: String? = null
     var next_page = ""
     var prev_page_url = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {

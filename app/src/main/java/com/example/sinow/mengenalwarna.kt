@@ -35,6 +35,7 @@ class mengenalwarna : AppCompatActivity() {
     var JSON_STRING = ""
     var next_page = ""
     var prev_page_url = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mengenalwarna)
@@ -51,6 +52,7 @@ class mengenalwarna : AppCompatActivity() {
         onBackPressed()
         }
     }
+
     private fun showEmployee() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
@@ -108,6 +110,7 @@ class mengenalwarna : AppCompatActivity() {
         val gj = GetJSON()
         gj.execute()
     }
+
     private fun showNextPage() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
