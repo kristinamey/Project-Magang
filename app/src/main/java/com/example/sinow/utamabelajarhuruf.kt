@@ -32,9 +32,9 @@ class utamabelajarhuruf : AppCompatActivity() {
         val viewGroup = buttontab.getChildAt(0) as ViewGroup
         val tabsCount = viewGroup.childCount
         buttontab.setSelectedTabIndicatorColor(0)
-            for (j in 0 until tabsCount){
-                viewGroup.getChildAt(j).setOnTouchListener { _, _ -> true }
-            }
+        for (j in 0 until tabsCount) {
+            viewGroup.getChildAt(j).setOnTouchListener { _, _ -> true }
+        }
 
         group_kiri.setOnClickListener {
             viewmengenalhuruf1.currentItem = 0
@@ -42,15 +42,19 @@ class utamabelajarhuruf : AppCompatActivity() {
         group_kanan.setOnClickListener {
             viewmengenalhuruf1.currentItem = 1
         }
-        
+
         keluar.setOnClickListener {
-        onBackPressed()
+            onBackPressed()
         }
     }
-    inner class PagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm,
-        BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
 
-        private val fragmentlist = listOf(Fragment_tab1mengenalhuruf(),Fragment_tab2mengenalhuruf())
+    inner class PagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(
+        fm,
+        BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+    ) {
+
+        private val fragmentlist =
+            listOf(Fragment_tab1mengenalhuruf(), Fragment_tab2mengenalhuruf())
 
         override fun getItem(position: Int): Fragment {
             return fragmentlist[position]
@@ -59,4 +63,5 @@ class utamabelajarhuruf : AppCompatActivity() {
         override fun getCount(): Int {
             return fragmentlist.size
         }
+    }
 }

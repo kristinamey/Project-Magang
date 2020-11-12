@@ -9,6 +9,7 @@
 
     <Button
         android:id="@+id/quis4"
+        android:onClick="tombol"
         android:layout_width="114dp"
         android:layout_height="45dp"
         android:background="@drawable/kotakquis" />

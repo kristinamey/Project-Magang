@@ -3,11 +3,13 @@ package com.example.sinow
 import android.app.ProgressDialog
 import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.view.isVisible
 import coil.ImageLoader
 import coil.api.load
 import coil.decode.SvgDecoder
@@ -29,7 +31,8 @@ class Fragment_tab1mengenalhuruf : Fragment() {
     var JSON_STRING = ""
     private var param1: String? = null
     private var param2: String? = null
-
+    var next_page = ""
+    var prev_page_url = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -59,14 +62,30 @@ class Fragment_tab1mengenalhuruf : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         getJSON()
+        next.setOnClickListener {
+            getJSONnextPage()
+        }
+        back.setOnClickListener {
+            getJSONprevPage()
+        }
     }
 
     private fun showEmployee() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
             val json = jsonObject.getJSONObject("data")
-            val next_page = jsonObject.getString("next_page_url")
-            val prev_page_urlZ = jsonObject.getString("prev_page_url")
+
+            prev_page_url=json.getString("prev_page_url")
+            next_page=json.getString("next_page_url")
+            if (!json.getString("next_page_url").isNullOrEmpty()){
+                next.isVisible=true
+            }
+            if (json.getString("prev_page_url").isNullOrEmpty()){
+                back.isVisible =false
+            } else {
+                back.isVisible =true
+            }
+
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHuruf>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHuruf>>(hasil, list)
@@ -102,6 +121,124 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             override fun doInBackground(vararg params: Void?): String {
                 val rh = RequestHandler()
                 return rh.sendGetRequest("${resources.getString(R.string.base_url)}api/huruf")
+            }
+        }
+
+        val gj = GetJSON()
+        gj.execute()
+    }
+
+
+    private fun showNextPage() {
+        try {
+            val jsonObject = JSONObject(JSON_STRING)
+            val json = jsonObject.getJSONObject("data")
+
+            prev_page_url=json.getString("prev_page_url")
+            next_page=json.getString("next_page_url")
+            if (!json.getString("next_page_url").isNullOrEmpty()){
+                next.isVisible=true
+            }
+            if (json.getString("prev_page_url").isNullOrEmpty()){
+                back.isVisible =false
+            } else {
+                back.isVisible =true
+            }
+
+            val hasil = json.getString("data")
+            val list = object : TypeToken<ArrayList<ModelHuruf>>() {}.type
+            val data = Gson().fromJson<ArrayList<ModelHuruf>>(hasil, list)
+            gambar_huruf.loadSvgOrOthers(data[0].gambar)
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun getJSONnextPage() {
+        class GetJSON :
+            AsyncTask<Void?, Void?, String>() {
+
+            var loading: ProgressDialog? = null
+            override fun onPreExecute() {
+                super.onPreExecute()
+                loading = ProgressDialog.show(
+                    requireContext(),
+                    "Sedang memproses...",
+                    "Tunggu...",
+                    false,
+                    false
+                )
+            }
+
+            override fun onPostExecute(s: String) {
+                super.onPostExecute(s)
+                loading!!.dismiss()
+                JSON_STRING = s
+                showNextPage()
+            }
+
+            override fun doInBackground(vararg params: Void?): String {
+                val rh = RequestHandler()
+                return rh.sendGetRequest(next_page)
+            }
+        }
+
+        val gj = GetJSON()
+        gj.execute()
+    }
+
+    private fun showPrevPage() {
+        try {
+            val jsonObject = JSONObject(JSON_STRING)
+            val json = jsonObject.getJSONObject("data")
+
+            prev_page_url=json.getString("prev_page_url")
+            next_page=json.getString("next_page_url")
+            if (!json.getString("next_page_url").isNullOrEmpty()){
+                next.isVisible=true
+            }
+            if (json.getString("prev_page_url").isNullOrEmpty()){
+                back.isVisible =false
+            } else {
+                back.isVisible =true
+            }
+
+
+            val hasil = json.getString("data")
+            val list = object : TypeToken<ArrayList<ModelHuruf>>() {}.type
+            val data = Gson().fromJson<ArrayList<ModelHuruf>>(hasil, list)
+            gambar_huruf.loadSvgOrOthers(data[0].gambar)
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun getJSONprevPage() {
+        class GetJSON :
+            AsyncTask<Void?, Void?, String>() {
+
+            var loading: ProgressDialog? = null
+            override fun onPreExecute() {
+                super.onPreExecute()
+                loading = ProgressDialog.show(
+                    requireContext(),
+                    "Sedang memproses...",
+                    "Tunggu...",
+                    false,
+                    false
+                )
+            }
+
+            override fun onPostExecute(s: String) {
+                super.onPostExecute(s)
+                loading!!.dismiss()
+                JSON_STRING = s
+                showPrevPage()
+            }
+
+            override fun doInBackground(vararg params: Void?): String {
+                val rh = RequestHandler()
+                return rh.sendGetRequest(prev_page_url)
             }
         }
 
