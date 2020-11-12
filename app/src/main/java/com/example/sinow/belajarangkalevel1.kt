@@ -45,10 +45,9 @@ class belajarangkalevel1 : AppCompatActivity() {
 
         keluar.setOnClickListener {
             onBackPressed()
-//            val intent = Intent(this, utamabelajarangka::class.java)
-//            startActivity(intent)
         }
     }
+
     private fun showEmployee() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
@@ -223,7 +222,6 @@ class belajarangkalevel1 : AppCompatActivity() {
         val gj = GetJSON()
         gj.execute()
     }
-
 
     fun ImageView.loadSvgOrOthers(myUrl: String?) {
         myUrl?.let {
