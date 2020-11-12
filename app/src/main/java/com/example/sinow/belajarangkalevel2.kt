@@ -101,6 +101,7 @@ class belajarangkalevel2 : AppCompatActivity() {
         val gj = GetJSON()
         gj.execute()
     }
+
     private fun showNextPage() {
         try {
             val jsonObject = JSONObject(JSON_STRING)

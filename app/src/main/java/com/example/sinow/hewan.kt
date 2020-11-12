@@ -35,6 +35,7 @@ class hewan : AppCompatActivity() {
     var JSON_STRING = ""
     var next_page = ""
     var prev_page_url = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hewan)
@@ -56,8 +57,8 @@ class hewan : AppCompatActivity() {
             val jsonObject = JSONObject(JSON_STRING)
             val json = jsonObject.getJSONObject("data")
 
-            prev_page_url = jsonObject.getString("prev_page_url")
-            next_page = jsonObject.getString("next_page_url")
+            prev_page_url = json.getString("prev_page_url")
+            next_page = json.getString("next_page_url")
             if (!json.getString("next_page_url").isNullOrEmpty()){
                 next.isVisible=true
             }
@@ -70,7 +71,7 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambar_hewan.loadSvgOrOthers(data[0].gambar)
+            gambarhewan.loadSvgOrOthers(data[0].gambar)
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -128,7 +129,7 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambar_hewan.loadSvgOrOthers(data[0].gambar)
+            gambarhewan.loadSvgOrOthers(data[0].gambar)
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -186,7 +187,7 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambar_hewan.loadSvgOrOthers(data[0].gambar)
+            gambarhewan.loadSvgOrOthers(data[0].gambar)
         } catch (e: JSONException) {
             e.printStackTrace()
         }
