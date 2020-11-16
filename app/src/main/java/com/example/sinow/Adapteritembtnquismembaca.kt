@@ -4,12 +4,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sinow.R
+import com.example.sinow.model.ModelHuruf
+import com.example.sinow.model.ModelQuis
 import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.itembtnquismembaca.view.*
 
-class Adapteritembtnquismembaca(private val onClick:(String) -> Unit)
+class Adapteritembtnquismembaca(private val onClick:(ModelQuis) -> Unit)
     : RecyclerView.Adapter<Adapteritembtnquismembaca.ViewHolder>() {
 
-    var items : List<String> = emptyList()
+    var items : List<ModelHuruf> = emptyList()
     set(value) {
         field = value
         notifyDataSetChanged()

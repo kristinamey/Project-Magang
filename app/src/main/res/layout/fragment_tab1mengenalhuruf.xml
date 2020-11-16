@@ -41,7 +41,8 @@
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.27"
+        android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/next"
@@ -53,10 +54,11 @@
         app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.27"
+        android:visibility="gone" />
 
     <ImageView
-        android:id="@+id/some_id"
+        android:id="@+id/gambar_huruf"
         android:layout_width="180dp"
         android:layout_height="138dp"
         app:layout_constraintBottom_toBottomOf="parent"

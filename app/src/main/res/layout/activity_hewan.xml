@@ -110,7 +110,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/some_id"
+        android:id="@+id/gambarhewan"
         android:layout_width="180dp"
         android:layout_height="138dp"
         android:layout_alignParentLeft="true"
