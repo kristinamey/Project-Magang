@@ -85,7 +85,6 @@
         android:gravity="top"
         android:fontFamily="@font/poppins2"
         android:textColor="#000000"
-        android:text="SATU"
         android:textSize="25dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
