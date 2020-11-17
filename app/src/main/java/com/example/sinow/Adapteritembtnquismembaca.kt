@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.itembtnquismembaca.view.*
 class Adapteritembtnquismembaca(private val onClick:(ModelQuis) -> Unit)
     : RecyclerView.Adapter<Adapteritembtnquismembaca.ViewHolder>() {
 
-    var items : List<ModelHuruf> = emptyList()
+    var items : List<ModelQuis> = emptyList()
     set(value) {
         field = value
         notifyDataSetChanged()
@@ -29,6 +29,7 @@ class Adapteritembtnquismembaca(private val onClick:(ModelQuis) -> Unit)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = items[position]
         with(holder.itemView){
+            quis4.text = data.opsi_a
         }
     }
 

@@ -1,6 +1,10 @@
 package com.example.sinow
 
 import android.app.ProgressDialog
+import android.media.AudioManager
+import android.media.MediaDataSource
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
@@ -18,12 +22,16 @@ import com.example.sinow.api.RequestHandler
 import com.example.sinow.model.ModelHuruf
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import kotlinx.android.synthetic.main.activity_belajarangkalevel1.*
+import kotlinx.android.synthetic.main.activity_belajarangkalevel3.*
 import kotlinx.android.synthetic.main.activity_hewan.*
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.back
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.next
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.reload
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -36,6 +44,7 @@ class Fragment_tab1mengenalhuruf : Fragment() {
     private var param2: String? = null
     var next_page = ""
     var prev_page_url = ""
+    var MediaDataSource = " "
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,6 +81,9 @@ class Fragment_tab1mengenalhuruf : Fragment() {
         back.setOnClickListener {
             getJSONprevPage()
         }
+        reload.setOnClickListener {
+            getJSON()
+        }
     }
 
     private fun showEmployee() {
@@ -96,6 +108,21 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             if(data.size != 0)(
                     gambar_huruf.loadSvgOrOthers(data[0].gambar)
                     )
+            val media = MediaPlayer()
+            media.setDataSource(requireContext(), Uri.parse(data[0].sound))
+            media.prepare()
+            media.start()
+            gambar_angkalv3.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(requireContext(), Uri.parse(data[0].sound))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("ANGKA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -273,3 +300,4 @@ class Fragment_tab1mengenalhuruf : Fragment() {
         }
     }
 }
+
