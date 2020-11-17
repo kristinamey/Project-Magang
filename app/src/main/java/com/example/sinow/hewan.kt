@@ -19,9 +19,12 @@ import com.example.sinow.model.ModelHuruf
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_belajarangkalevel3.*
+import kotlinx.android.synthetic.main.activity_buahdansayur.*
 import kotlinx.android.synthetic.main.activity_hewan.*
 import kotlinx.android.synthetic.main.activity_quis.keluar
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.back
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.next
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
@@ -68,7 +71,9 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambarhewan.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarhewan.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -127,7 +132,9 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambarhewan.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarhewan.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -185,7 +192,9 @@ class hewan : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHewan>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHewan>>(hasil, list)
-            gambarhewan.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarhewan.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
