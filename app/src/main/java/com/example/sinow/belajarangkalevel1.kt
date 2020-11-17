@@ -72,7 +72,6 @@ class belajarangkalevel1 : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka1>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka1>>(hasil, list)
-            gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
             satu.text = data[0].tulisan
             val media = MediaPlayer()
             media.setDataSource(this, Uri.parse(data[0].sound))
@@ -89,6 +88,9 @@ class belajarangkalevel1 : AppCompatActivity() {
                     Log.e("ANGKA", e.toString())
                 }
             }
+            if(data.size != 0)(
+                    gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -152,6 +154,9 @@ class belajarangkalevel1 : AppCompatActivity() {
                 media.start()
                 media.pause()
             }
+            if(data.size != 0)(
+                    gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -210,7 +215,9 @@ class belajarangkalevel1 : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka1>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka1>>(hasil, list)
-            gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }

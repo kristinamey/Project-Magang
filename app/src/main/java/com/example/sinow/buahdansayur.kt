@@ -17,6 +17,7 @@ import com.example.sinow.model.ModelBuah
 import com.example.sinow.model.ModelHewan
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import kotlinx.android.synthetic.main.activity_belajarangkalevel1.*
 import kotlinx.android.synthetic.main.activity_buahdansayur.*
 import kotlinx.android.synthetic.main.activity_hewan.*
 import kotlinx.android.synthetic.main.activity_quis.*
@@ -69,7 +70,9 @@ class buahdansayur : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
-            gambarbuah.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarbuah.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -127,7 +130,9 @@ class buahdansayur : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
-            gambarbuah.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarbuah.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -185,7 +190,9 @@ class buahdansayur : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
-            gambarbuah.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarbuah.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
