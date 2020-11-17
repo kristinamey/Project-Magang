@@ -18,7 +18,10 @@ import com.example.sinow.api.RequestHandler
 import com.example.sinow.model.ModelHuruf
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import kotlinx.android.synthetic.main.activity_hewan.*
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.back
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.next
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
@@ -90,7 +93,9 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHuruf>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHuruf>>(hasil, list)
-            gambar_huruf.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambar_huruf.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -148,7 +153,9 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHuruf>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHuruf>>(hasil, list)
-            gambar_huruf.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambar_huruf.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -206,7 +213,9 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelHuruf>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelHuruf>>(hasil, list)
-            gambar_huruf.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambar_huruf.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }

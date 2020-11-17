@@ -63,7 +63,9 @@ class belajarangkalevel2 : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka2>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka2>>(hasil, list)
-            gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -121,7 +123,9 @@ class belajarangkalevel2 : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka2>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka2>>(hasil, list)
-            gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -180,7 +184,9 @@ class belajarangkalevel2 : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka2>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka2>>(hasil, list)
-            gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
