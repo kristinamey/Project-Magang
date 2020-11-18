@@ -102,10 +102,10 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             if(data.size != 0)(
                     gambar_huruf.loadSvgOrOthers(data[0].gambar)
                     )
-            val media = MediaPlayer()
+            /*val media = MediaPlayer()
             media.setDataSource(requireContext(), Uri.parse(data[0].sound))
             media.prepare()
-            media.start()
+            media.start()*/
             gambar_huruf.setOnClickListener {
                 val media2 = MediaPlayer()
                 try {
@@ -177,6 +177,17 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             if(data.size != 0)(
                     gambar_huruf.loadSvgOrOthers(data[0].gambar)
                     )
+            gambar_huruf.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(requireContext(), Uri.parse(data[0].sound))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("ANGKA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -237,6 +248,17 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             if(data.size != 0)(
                     gambar_huruf.loadSvgOrOthers(data[0].gambar)
                     )
+            gambar_huruf.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(requireContext(), Uri.parse(data[0].sound))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("ANGKA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }

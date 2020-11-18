@@ -56,6 +56,27 @@
         android:background="@drawable/rectangle_5"
         />
 
+    <TextView
+        android:id="@+id/textmengenalwarna"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins2"
+        android:gravity="top"
+        android:text="BROKOLI"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
         android:id="@+id/back"
         android:layout_width="54dp"
@@ -112,7 +133,7 @@
 
 
     <ImageView
-        android:id="@+id/emojione_fl"
+        android:id="@+id/inggris"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_alignParentLeft="true"

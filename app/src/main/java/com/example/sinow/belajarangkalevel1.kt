@@ -73,10 +73,11 @@ class belajarangkalevel1 : AppCompatActivity() {
             val list = object : TypeToken<ArrayList<ModelAngka1>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka1>>(hasil, list)
             satu.text = data[0].tulisan
-            val media = MediaPlayer()
+
+            /*val media = MediaPlayer()
             media.setDataSource(this, Uri.parse(data[0].sound))
             media.prepare()
-            media.start()
+            media.start()*/
             gambar_angkalv1.setOnClickListener {
                 val media2 = MediaPlayer()
                 try {

@@ -3,7 +3,6 @@ package com.example.sinow
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sinow.R
 import kotlinx.android.extensions.LayoutContainer
 
 class Adapteritembtnmenyanyi(private val onClick:(String) -> Unit)
