@@ -138,7 +138,7 @@
 
 
     <ImageView
-        android:id="@+id/emojione_fl"
+        android:id="@+id/inggris"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_alignParentLeft="true"
