@@ -75,10 +75,11 @@ class belajarangkalevel2 : AppCompatActivity() {
             if(data.size != 0)(
                     gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
                     )
-            val media = MediaPlayer()
+
+            /*val media = MediaPlayer()
             media.setDataSource(this, Uri.parse(data[0].sound))
             media.prepare()
-            media.start()
+            media.start()*/
             gambar_angkalv2.setOnClickListener {
                 val media2 = MediaPlayer()
                 try {
@@ -143,13 +144,24 @@ class belajarangkalevel2 : AppCompatActivity() {
             } else {
                 back.isVisible =true
             }
-
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka2>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka2>>(hasil, list)
             if(data.size != 0)(
                     gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
                     )
+            sebelas.text = data[0].tulisan
+            gambar_angkalv2.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("ANGKA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -210,6 +222,18 @@ class belajarangkalevel2 : AppCompatActivity() {
             if(data.size != 0)(
                     gambar_angkalv2.loadSvgOrOthers(data[0].gambar)
                     )
+            sebelas.text = data[0].tulisan
+            gambar_angkalv2.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("ANGKA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }

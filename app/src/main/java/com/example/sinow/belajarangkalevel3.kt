@@ -82,10 +82,10 @@ class belajarangkalevel3 : AppCompatActivity() {
             if(data.size != 0)(
                     gambar_angkalv3.loadSvgOrOthers(data[0].gambar)
                     )
-            val media = MediaPlayer()
+            /*val media = MediaPlayer()
             media.setDataSource(this, Uri.parse(data[0].sound))
             media.prepare()
-            media.start()
+            media.start()*/
             gambar_angkalv3.setOnClickListener {
                 val media2 = MediaPlayer()
                 try {
@@ -157,6 +157,18 @@ class belajarangkalevel3 : AppCompatActivity() {
             if(data.size != 0)(
                     gambar_angkalv3.loadSvgOrOthers(data[0].gambar)
                     )
+            seratus.text = data[0].tulisan
+            gambar_angkalv3.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("ANGKA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -217,6 +229,18 @@ class belajarangkalevel3 : AppCompatActivity() {
             if(data.size != 0)(
                     gambar_angkalv3.loadSvgOrOthers(data[0].gambar)
                     )
+            seratus.text = data[0].tulisan
+            gambar_angkalv3.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("ANGKA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
