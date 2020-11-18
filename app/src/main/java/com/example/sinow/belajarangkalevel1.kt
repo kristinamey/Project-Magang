@@ -2,9 +2,14 @@ package com.example.sinow
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.media.AudioManager
+import android.media.MediaPlayer
+import android.net.Uri
+import android.net.rtp.AudioStream
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.core.view.isVisible
 import coil.ImageLoader
@@ -18,12 +23,9 @@ import com.example.sinow.model.ModelWarna
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_belajarangkalevel1.*
-import kotlinx.android.synthetic.main.activity_mengenalwarna.*
-import kotlinx.android.synthetic.main.activity_quis.*
-import kotlinx.android.synthetic.main.activity_quis.keluar
-import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -46,6 +48,9 @@ class belajarangkalevel1 : AppCompatActivity() {
         keluar.setOnClickListener {
             onBackPressed()
         }
+        reload.setOnClickListener {
+            getJSON()
+        }
     }
 
     private fun showEmployee() {
@@ -67,7 +72,25 @@ class belajarangkalevel1 : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka1>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka1>>(hasil, list)
-            gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+            satu.text = data[0].tulisan
+            val media = MediaPlayer()
+            media.setDataSource(this, Uri.parse(data[0].sound))
+            media.prepare()
+            media.start()
+            gambar_angkalv1.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("ANGKA", e.toString())
+                }
+            }
+            if(data.size != 0)(
+                    gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -125,7 +148,15 @@ class belajarangkalevel1 : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka1>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka1>>(hasil, list)
-            gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0){
+                gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+                val media = MediaPlayer.create(this, Uri.parse(data[0].sound))
+                media.start()
+                media.pause()
+            }
+            if(data.size != 0)(
+                    gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -184,7 +215,9 @@ class belajarangkalevel1 : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelAngka1>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka1>>(hasil, list)
-            gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }

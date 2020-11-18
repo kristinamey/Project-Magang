@@ -18,10 +18,13 @@ import com.example.sinow.model.ModelWarna
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_belajarangkalevel2.*
+import kotlinx.android.synthetic.main.activity_belajarangkalevel2.next
 import kotlinx.android.synthetic.main.activity_buahdansayur.*
 import kotlinx.android.synthetic.main.activity_mengenalwarna.*
+import kotlinx.android.synthetic.main.activity_mengenalwarna.back
 import kotlinx.android.synthetic.main.activity_quis.*
 import kotlinx.android.synthetic.main.activity_quis.keluar
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
@@ -72,7 +75,9 @@ class mengenalwarna : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelWarna>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelWarna>>(hasil, list)
-            gambarwarna.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarwarna.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -130,7 +135,9 @@ class mengenalwarna : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelWarna>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelWarna>>(hasil, list)
-            gambarwarna.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarwarna.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -189,7 +196,9 @@ class mengenalwarna : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelWarna>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelWarna>>(hasil, list)
-            gambarwarna.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0)(
+                    gambarwarna.loadSvgOrOthers(data[0].gambar)
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
