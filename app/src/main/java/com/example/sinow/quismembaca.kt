@@ -1,25 +1,19 @@
 package com.example.sinow
 
 import android.app.ProgressDialog
-import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
-import androidx.core.view.isVisible
 import com.example.sinow.api.RequestHandler
-import com.example.sinow.model.ModelAngka1
-import com.example.sinow.model.ModelHuruf
 import com.example.sinow.model.ModelQuis
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_quismembaca.*
 import org.json.JSONException
 import org.json.JSONObject
-import java.io.IOException
 
 class quismembaca : AppCompatActivity() {
     var JSON_STRING = ""
