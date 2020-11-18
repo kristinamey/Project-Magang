@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".feedback"></activity>
+        <activity android:name=".lagu"></activity>
+        <activity android:name=".feedback" />
         <activity android:name=".utamamengenalwarna" />
         <activity android:name=".quismembaca" />
         <activity android:name=".belajarangkalevel2" />

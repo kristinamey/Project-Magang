@@ -66,7 +66,7 @@ class quismembaca : AppCompatActivity() {
             quis1.setOnClickListener {
                 if(data[0].opsi_a == data[0].jawaban){
                     Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
-                    //tambahkan next
+                    //next
                 }
                 else {
                     Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
