@@ -149,7 +149,19 @@ class belajarangkalevel1 : AppCompatActivity() {
             val list = object : TypeToken<ArrayList<ModelAngka1>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelAngka1>>(hasil, list)
             if(data.size != 0){
+                satu.text = data[0].tulisan
                 gambar_angkalv1.loadSvgOrOthers(data[0].gambar)
+                gambar_angkalv1.setOnClickListener {
+                    val media2 = MediaPlayer()
+                    try {
+                        media2.setDataSource(this, Uri.parse(data[0].sound))
+                        //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                        media2.prepare()
+                        media2.start()
+                    } catch (e : IOException){
+                        Log.e("ANGKA", e.toString())
+                    }
+                }
                 val media = MediaPlayer.create(this, Uri.parse(data[0].sound))
                 media.start()
                 media.pause()

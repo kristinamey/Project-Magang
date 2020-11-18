@@ -22,13 +22,7 @@ import com.example.sinow.api.RequestHandler
 import com.example.sinow.model.ModelHuruf
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import kotlinx.android.synthetic.main.activity_belajarangkalevel1.*
-import kotlinx.android.synthetic.main.activity_belajarangkalevel3.*
-import kotlinx.android.synthetic.main.activity_hewan.*
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
-import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.back
-import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.next
-import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.reload
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -112,7 +106,7 @@ class Fragment_tab1mengenalhuruf : Fragment() {
             media.setDataSource(requireContext(), Uri.parse(data[0].sound))
             media.prepare()
             media.start()
-            gambar_angkalv3.setOnClickListener {
+            gambar_huruf.setOnClickListener {
                 val media2 = MediaPlayer()
                 try {
                     media2.setDataSource(requireContext(), Uri.parse(data[0].sound))
