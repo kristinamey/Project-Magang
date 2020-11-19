@@ -68,6 +68,4 @@ class Adaptermengenalhuruf(private val onClick:(ModelHuruf) -> Unit)
             }
         }
     }
-
-
 }
