@@ -37,11 +37,11 @@ class menyanyi : AppCompatActivity() {
         }
     }
     private fun tombol(Data: ModelMenyanyi){
-        val media2 = MediaPlayer()
-        media2.setDataSource(this, Uri.parse(Data.sound))
-        media2.prepare()
-        media2.start()
+        val intent = Intent(this, lagu::class.java)
+        intent.putExtra("id", Data.id)
+        startActivity(intent)
     }
+
     private fun showEmployee() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
