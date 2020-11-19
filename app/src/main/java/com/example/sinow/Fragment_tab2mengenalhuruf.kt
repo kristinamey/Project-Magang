@@ -13,12 +13,22 @@ class Fragment_tab2mengenalhuruf : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
+         val adapteritem:Adaptermengenalhuruf by lazy(LazyThreadSafetyMode.NONE){
+             Adaptermengenalhuruf(::tombol)
+         }
         }
+
+    }
+    private fun tombol(s: String) {
+        TODO("Not yet implemented")
+
     }
 
     override fun onCreateView(
