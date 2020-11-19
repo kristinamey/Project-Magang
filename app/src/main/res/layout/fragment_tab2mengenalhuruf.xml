@@ -3,10 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment_tab2mengenalhuruf"
-    android:layout_gravity="center_horizontal">
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tab2mengenalhuruf"
@@ -14,6 +15,7 @@
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:itemCount="4"
+        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="4"
         tools:listitem="@layout/itemtab2mengenalhuruf"/>
