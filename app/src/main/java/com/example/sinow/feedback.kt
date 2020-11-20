@@ -46,13 +46,13 @@ class feedback : AppCompatActivity() {
                 Toast.makeText(this, "Error server", Toast.LENGTH_SHORT).show()
             }
         ){
-            override fun getParams(): MutableMap<String, String> {
-                val params = HashMap<String, String>()/*
-                params.put(Config.key_nim, namanya)
-                params.put(Config.key_password, emailnya)
-                params.put(Config.key_password, komentarnya)*/
+           /* override fun getParams(): MutableMap<String, String, String> {
+                val params = HashMap<String, String, String>()
+                params.put(config.namanya)
+                params.put(config.emailnya)
+                params.put(config.komentarnya)
                 return params
-            }
+            }*/
         }
         Volley.newRequestQueue(this).add(stringRequest)
     }
