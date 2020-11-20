@@ -7,7 +7,12 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import androidx.core.view.isVisible
+import coil.ImageLoader
+import coil.api.load
+import coil.decode.SvgDecoder
+import coil.request.LoadRequest
 import com.example.sinow.api.RequestHandler
 import com.example.sinow.model.ModelAngka1
 import com.example.sinow.model.ModelMenyanyi
@@ -19,6 +24,8 @@ import kotlinx.android.synthetic.main.lagu.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
+import java.util.*
+import kotlin.collections.ArrayList
 
 class lagu : AppCompatActivity() {
     var JSON_STRING = ""
@@ -46,9 +53,9 @@ class lagu : AppCompatActivity() {
                     Log.e("Lagu", e.toString())
                 }
             }
-            /*if(data.size != 0)(
+            if(data.size != 0)(
                     konten_huruf.loadSvgOrOthers(data[0].gambar)
-                    )*/
+                    )
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -86,6 +93,23 @@ class lagu : AppCompatActivity() {
         val gj = GetJSON()
         gj.execute()
     }
-
+    fun ImageView.loadSvgOrOthers(myUrl: String?) {
+        myUrl?.let {
+            if (it.toLowerCase(Locale.ENGLISH).endsWith("svg")) {
+                val imageLoader = ImageLoader.Builder(this.context)
+                    .componentRegistry {
+                        add(SvgDecoder(this@loadSvgOrOthers.context))
+                    }
+                    .build()
+                val request = LoadRequest.Builder(this.context)
+                    .data(it)
+                    .target(this)
+                    .build()
+                imageLoader.execute(request)
+            } else {
+                this.load(myUrl)
+            }
+        }
+    }
 
 }
