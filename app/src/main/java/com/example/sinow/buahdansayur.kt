@@ -2,9 +2,12 @@ package com.example.sinow
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.core.content.ContentProviderCompat
 import androidx.core.view.isVisible
@@ -17,6 +20,7 @@ import com.example.sinow.model.ModelBuah
 import com.example.sinow.model.ModelHewan
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import kotlinx.android.synthetic.main.activity_belajarangkalevel1.*
 import kotlinx.android.synthetic.main.activity_buahdansayur.*
 import kotlinx.android.synthetic.main.activity_hewan.*
 import kotlinx.android.synthetic.main.activity_quis.*
@@ -24,11 +28,14 @@ import kotlinx.android.synthetic.main.activity_quis.keluar
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlinx.android.synthetic.main.activity_buahdansayur.back as back1
 import kotlinx.android.synthetic.main.activity_buahdansayur.next as next1
 import kotlinx.android.synthetic.main.activity_hewan.back as back1
+import kotlinx.android.synthetic.main.activity_hewan.indo as indo1
+import kotlinx.android.synthetic.main.activity_hewan.inggris as inggris1
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.next as next1
 
 class buahdansayur : AppCompatActivity() {
@@ -45,7 +52,6 @@ class buahdansayur : AppCompatActivity() {
         back.setOnClickListener {
             getJSONprevPage()
         }
-
         keluar.setOnClickListener {
             onBackPressed()
         }
@@ -65,11 +71,35 @@ class buahdansayur : AppCompatActivity() {
             } else {
                 back.isVisible =true
             }
-
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
-            gambarbuah.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0){
+                gambarbuah.loadSvgOrOthers(data[0].gambar)
+                textbuahdansayur.text = "${data[0].tulisan_id} | ${data[0].tulisan_en}"
+            }
+            indo.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_id))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("BUAH", e.toString())
+                }
+            }
+            inggris.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_en))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("BUAH", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -127,7 +157,32 @@ class buahdansayur : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
-            gambarbuah.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0){
+                gambarbuah.loadSvgOrOthers(data[0].gambar)
+                textbuahdansayur.text = "${data[0].tulisan_id} | ${data[0].tulisan_en}"
+            }
+            indo.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_id))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("BUAH", e.toString())
+                }
+            }
+            inggris.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_en))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("BUAH", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -185,7 +240,32 @@ class buahdansayur : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelBuah>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelBuah>>(hasil, list)
-            gambarbuah.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0){
+                gambarbuah.loadSvgOrOthers(data[0].gambar)
+                textbuahdansayur.text = "${data[0].tulisan_id} | ${data[0].tulisan_en}"
+            }
+            indo.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_id))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("BUAH", e.toString())
+                }
+            }
+            inggris.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_en))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("BUAH", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }

@@ -16,7 +16,7 @@ class belajar : AppCompatActivity() {
         }
 
         btn_mengenal_huruf.setOnClickListener {
-            val intent = Intent (this, utamabelajarhuruf::class.java)
+            val intent = Intent (this, Fragment_tab1mengenalhuruf::class.java)
             (startActivity(intent))
         }
 

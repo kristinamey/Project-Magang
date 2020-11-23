@@ -11,11 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".utamabelajarhuruf"></activity>
-        <activity android:name=".belajarhuruflevel3" />
-        <activity android:name=".belajarhuruflevel2" />
-        <activity android:name=".belajarhuruflevel1" />
-        <activity android:name=".feedback" />
+        <activity android:name=".feedback"></activity>
         <activity android:name=".utamamengenalwarna" />
         <activity android:name=".quismembaca" />
         <activity android:name=".belajarangkalevel2" />
@@ -30,7 +26,7 @@
         <activity android:name=".utamamembaca" />
         <activity android:name=".belajarangkalevel1" />
         <activity android:name=".utamabelajarangka" />
-        <activity android:name=".belajarhuruflevel1" />
+        <activity android:name=".utamabelajarhuruf" />
         <activity android:name=".quis" />
         <activity android:name=".hiburan" />
         <activity android:name=".home" />

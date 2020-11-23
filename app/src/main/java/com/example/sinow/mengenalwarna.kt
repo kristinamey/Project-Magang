@@ -2,9 +2,12 @@ package com.example.sinow
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.core.view.isVisible
 import coil.ImageLoader
@@ -18,17 +21,23 @@ import com.example.sinow.model.ModelWarna
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_belajarangkalevel2.*
+import kotlinx.android.synthetic.main.activity_belajarangkalevel2.next
 import kotlinx.android.synthetic.main.activity_buahdansayur.*
 import kotlinx.android.synthetic.main.activity_mengenalwarna.*
+import kotlinx.android.synthetic.main.activity_mengenalwarna.back
 import kotlinx.android.synthetic.main.activity_quis.*
 import kotlinx.android.synthetic.main.activity_quis.keluar
+import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlinx.android.synthetic.main.activity_belajarangkalevel2.back as back1
 import kotlinx.android.synthetic.main.activity_buahdansayur.back as back1
+import kotlinx.android.synthetic.main.activity_buahdansayur.inggris as inggris1
 import kotlinx.android.synthetic.main.activity_buahdansayur.next as next1
+import kotlinx.android.synthetic.main.activity_mengenalwarna.indo as indo1
 import kotlinx.android.synthetic.main.activity_mengenalwarna.next as next1
 
 class mengenalwarna : AppCompatActivity() {
@@ -72,7 +81,32 @@ class mengenalwarna : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelWarna>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelWarna>>(hasil, list)
-            gambarwarna.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0){
+                gambarwarna.loadSvgOrOthers(data[0].gambar)
+                textmengenalwarna.text = "${data[0].tulisan_id} | ${data[0].tulisan_en}"
+            }
+            indo.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_id))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("WARNA", e.toString())
+                }
+            }
+            inggris.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_en))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("WARNA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -130,7 +164,32 @@ class mengenalwarna : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelWarna>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelWarna>>(hasil, list)
-            gambarwarna.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0){
+                gambarwarna.loadSvgOrOthers(data[0].gambar)
+                textmengenalwarna.text = "${data[0].tulisan_id} | ${data[0].tulisan_en}"
+            }
+            indo.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_id))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("WARNA", e.toString())
+                }
+            }
+            inggris.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_en))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("WARNA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -189,7 +248,32 @@ class mengenalwarna : AppCompatActivity() {
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelWarna>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelWarna>>(hasil, list)
-            gambarwarna.loadSvgOrOthers(data[0].gambar)
+            if(data.size != 0){
+                gambarwarna.loadSvgOrOthers(data[0].gambar)
+                textmengenalwarna.text = "${data[0].tulisan_id} | ${data[0].tulisan_en}"
+            }
+            indo.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_id))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("WARNA", e.toString())
+                }
+            }
+            inggris.setOnClickListener {
+                val media2 = MediaPlayer()
+                try {
+                    media2.setDataSource(this, Uri.parse(data[0].sound_en))
+                    //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
+                    media2.prepare()
+                    media2.start()
+                } catch (e : IOException){
+                    Log.e("WARNA", e.toString())
+                }
+            }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
