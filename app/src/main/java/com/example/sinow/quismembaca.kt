@@ -66,54 +66,7 @@ class quismembaca : AppCompatActivity() {
 
             quis1.setOnClickListener {
 
-                private fun showNextPage() {
-                    try {
-                        val jsonObject = JSONObject(JSON_STRING)
-                        val json = jsonObject.getJSONObject("data")
 
-                        prev_page_url=json.getString("prev_page_url")
-                        next_page=json.getString("next_page_url")
-                        if (!json.getString("next_page_url").isNullOrEmpty()){
-                            next.isVisible=true
-                        }
-                        if (json.getString("prev_page_url").isNullOrEmpty()){
-                            back.isVisible =false
-                        } else {
-                            back.isVisible =true
-                        }
-                        val hasil = json.getString("data")
-                        val list = object : TypeToken<ArrayList<ModelQuis>>() {}.type
-                        val data = Gson().fromJson<ArrayList<ModelQuis>>(hasil, list)
-                        if(data.size != 0){
-                            gambarhewan.loadSvgOrOthers(data[0].pertanyaan)
-                            satu.text = "${data[0].tulisan_id} | ${data[0].tulisan_en}"
-                        }
-                        indo.setOnClickListener {
-                            val media2 = MediaPlayer()
-                            try {
-                                media2.setDataSource(this, Uri.parse(data[0].sound_id))
-                                //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
-                                media2.prepare()
-                                media2.start()
-                            } catch (e : IOException){
-                                Log.e("HEWAN", e.toString())
-                            }
-                        }
-                        inggris.setOnClickListener {
-                            val media2 = MediaPlayer()
-                            try {
-                                media2.setDataSource(this, Uri.parse(data[0].sound_en))
-                                //media.setAudioStreamType(AudioManager.STREAM_MUSIC)
-                                media2.prepare()
-                                media2.start()
-                            } catch (e : IOException){
-                                Log.e("HEWAN", e.toString())
-                            }
-                        }
-                    } catch (e: JSONException) {
-                        e.printStackTrace()
-                    }
-                }
                 if(data[0].opsi_a == data[0].jawaban){
                     Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
                     //next
@@ -186,5 +139,4 @@ class quismembaca : AppCompatActivity() {
         val gj = GetJSON()
         gj.execute()
     }
-
 }
