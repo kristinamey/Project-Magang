@@ -48,12 +48,20 @@ class feedback : AppCompatActivity() {
         ){
            override fun getParams(): MutableMap<String, String> {
                 val params = HashMap<String, String>()
-                params[""] = namanya
-                params[""] = emailnya
-                params[""] = komentarnya
+                params["nama"] = namanya
+                params["email"] = emailnya
+                params["komentar"] = komentarnya
                 return params
             }
         }
         Volley.newRequestQueue(this).add(stringRequest)
+    }
+
+    private fun validate() : Boolean{
+        if(nama.text.toString().isEmpty()){
+            nama.error = "harap isi bidang ini"
+            return false
+        }
+        return true
     }
 }
