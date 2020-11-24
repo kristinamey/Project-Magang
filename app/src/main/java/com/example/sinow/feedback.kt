@@ -32,7 +32,7 @@ class feedback : AppCompatActivity() {
             false,
             false
         )
-        val stringRequest    = object : StringRequest(Request.Method.POST, "api/kritiksaran",
+        val stringRequest    = object : StringRequest(Request.Method.POST, "${resources.getString(R.string.base_url)}api/kritiksaran",
             Response.Listener { response ->
                 if(response.contains("data")){
                     loading.dismiss()
@@ -46,13 +46,13 @@ class feedback : AppCompatActivity() {
                 Toast.makeText(this, "Error server", Toast.LENGTH_SHORT).show()
             }
         ){
-           /* override fun getParams(): MutableMap<String, String, String> {
-                val params = HashMap<String, String, String>()
-                params.put(config.namanya)
-                params.put(config.emailnya)
-                params.put(config.komentarnya)
+           override fun getParams(): MutableMap<String, String> {
+                val params = HashMap<String, String>()
+                params[""] = namanya
+                params[""] = emailnya
+                params[""] = komentarnya
                 return params
-            }*/
+            }
         }
         Volley.newRequestQueue(this).add(stringRequest)
     }
