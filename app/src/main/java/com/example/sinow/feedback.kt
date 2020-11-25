@@ -16,6 +16,9 @@ class feedback : AppCompatActivity() {
         setContentView(R.layout.activity_feedback)
 
         btnkirim.setOnClickListener {
+            if(validate()){
+                Toast.makeText(this, "siipppp", Toast.LENGTH_SHORT).show()
+            }
             //tuliskan post ke backend
         }
     }
@@ -60,6 +63,14 @@ class feedback : AppCompatActivity() {
     private fun validate() : Boolean{
         if(nama.text.toString().isEmpty()){
             nama.error = "harap isi bidang ini"
+            return false
+        }
+        if(email.text.toString().isEmpty()){
+            email.error = "harap isi bidang ini"
+            return false
+        }
+        if(komentar.text.toString().isEmpty()){
+            komentar.error = "harap isi bidang ini"
             return false
         }
         return true
