@@ -17,7 +17,7 @@ class feedback : AppCompatActivity() {
 
         btnkirim.setOnClickListener {
             if(validate()){
-                Toast.makeText(this, "siipppp", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Terimakasih Kritik dan Saran Anda", Toast.LENGTH_SHORT).show()
             }
             //tuliskan post ke backend
         }
