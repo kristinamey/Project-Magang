@@ -40,7 +40,6 @@ class quismembaca : AppCompatActivity() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
             val json = jsonObject.getJSONObject("data")
-
             prev_page_url = json.getString("prev_page_url")
             next_page = json.getString("next_page_url")
             val hasil = json.getString("data")

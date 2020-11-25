@@ -74,6 +74,8 @@ class Fragment_tab1quisberhitung : Fragment() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
             val json = jsonObject.getJSONObject("data")
+            prev_page_url = json.getString("prev_page_url")
+            next_page = json.getString("next_page_url")
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelQuis>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelQuis>>(hasil, list)
@@ -86,8 +88,8 @@ class Fragment_tab1quisberhitung : Fragment() {
 
             btn_jawaban1.setOnClickListener {
                 if(data[0].opsi_a == data[0].jawaban){
-                    Toast.makeText(requireContext(), "betul", Toast.LENGTH_SHORT).show()
-                    getNext()
+                    Toast.makeText(requireContext(), "Benar", Toast.LENGTH_SHORT).show()
+                    getNext2()
                 }
                 else {
                     Toast.makeText(requireContext(), "salah", Toast.LENGTH_SHORT).show()
@@ -95,8 +97,8 @@ class Fragment_tab1quisberhitung : Fragment() {
             }
             btn_jawaban2.setOnClickListener {
                 if(data[0].opsi_b == data[0].jawaban){
-                    Toast.makeText(requireContext(), "betul", Toast.LENGTH_SHORT).show()
-                  getNext()//tambahkan next
+                    Toast.makeText(requireContext(), "Benar", Toast.LENGTH_SHORT).show()
+                    getNext2()
                 }
                 else {
                     Toast.makeText(requireContext(), "salah", Toast.LENGTH_SHORT).show()
@@ -104,8 +106,8 @@ class Fragment_tab1quisberhitung : Fragment() {
             }
             btn_jawaban3.setOnClickListener {
                 if(data[0].opsi_c == data[0].jawaban){
-                    Toast.makeText(requireContext(), "betul", Toast.LENGTH_SHORT).show()
-                    getNext()//tambahkan next
+                    Toast.makeText(requireContext(), "Benar", Toast.LENGTH_SHORT).show()
+                    getNext2()
                 }
                 else {
                     Toast.makeText(requireContext(), "salah", Toast.LENGTH_SHORT).show()
@@ -113,8 +115,8 @@ class Fragment_tab1quisberhitung : Fragment() {
             }
             btn_jawaban4.setOnClickListener {
                 if(data[0].opsi_d == data[0].jawaban){
-                    Toast.makeText(requireContext(), "betul", Toast.LENGTH_SHORT).show()
-                    getNext()//tambahkan next
+                    Toast.makeText(requireContext(), "Benar", Toast.LENGTH_SHORT).show()
+             getNext2()
                 }
                 else {
                     Toast.makeText(requireContext(), "salah", Toast.LENGTH_SHORT).show()
@@ -158,13 +160,36 @@ class Fragment_tab1quisberhitung : Fragment() {
         gj.execute()
     }
 
-    private fun showEmployee1() {
+    fun ImageView.loadSvgOrOthers(myUrl: String?) {
+        myUrl?.let {
+            if (it.toLowerCase(Locale.ENGLISH).endsWith("svg")) {
+                val imageLoader = ImageLoader.Builder(this.context)
+                    .componentRegistry {
+                        add(SvgDecoder(this@loadSvgOrOthers.context))
+                    }
+                    .build()
+                val request = LoadRequest.Builder(this.context)
+                    .data(it)
+                    .target(this)
+                    .build()
+                imageLoader.execute(request)
+            } else {
+                this.load(myUrl)
+            }
+        }
+    }
+
+    private fun showEmployee2() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
             val json = jsonObject.getJSONObject("data")
+
+            prev_page_url = json.getString("prev_page_url")
+            next_page = json.getString("next_page_url")
             val hasil = json.getString("data")
             val list = object : TypeToken<ArrayList<ModelQuis>>() {}.type
             val data = Gson().fromJson<ArrayList<ModelQuis>>(hasil, list)
+
             viewsoalberhitungplus.loadSvgOrOthers(data[0].pertanyaan)
 
             btn_jawaban1.text = data[0].opsi_a
@@ -174,8 +199,8 @@ class Fragment_tab1quisberhitung : Fragment() {
 
             btn_jawaban1.setOnClickListener {
                 if(data[0].opsi_a == data[0].jawaban){
-                    Toast.makeText(requireContext(), "betul", Toast.LENGTH_SHORT).show()
-                    getNext()
+                    Toast.makeText(requireContext(), "Benar", Toast.LENGTH_SHORT).show()
+                    getNext2()
                 }
                 else {
                     Toast.makeText(requireContext(), "salah", Toast.LENGTH_SHORT).show()
@@ -184,7 +209,7 @@ class Fragment_tab1quisberhitung : Fragment() {
             btn_jawaban2.setOnClickListener {
                 if(data[0].opsi_b == data[0].jawaban){
                     Toast.makeText(requireContext(), "betul", Toast.LENGTH_SHORT).show()
-                    getNext()//tambahkan next
+                    getNext2()
                 }
                 else {
                     Toast.makeText(requireContext(), "salah", Toast.LENGTH_SHORT).show()
@@ -193,7 +218,7 @@ class Fragment_tab1quisberhitung : Fragment() {
             btn_jawaban3.setOnClickListener {
                 if(data[0].opsi_c == data[0].jawaban){
                     Toast.makeText(requireContext(), "betul", Toast.LENGTH_SHORT).show()
-                    getNext()//tambahkan next
+                    getNext2()
                 }
                 else {
                     Toast.makeText(requireContext(), "salah", Toast.LENGTH_SHORT).show()
@@ -202,7 +227,7 @@ class Fragment_tab1quisberhitung : Fragment() {
             btn_jawaban4.setOnClickListener {
                 if(data[0].opsi_d == data[0].jawaban){
                     Toast.makeText(requireContext(), "betul", Toast.LENGTH_SHORT).show()
-                    getNext()//tambahkan next
+                    getNext2()
                 }
                 else {
                     Toast.makeText(requireContext(), "salah", Toast.LENGTH_SHORT).show()
@@ -213,7 +238,7 @@ class Fragment_tab1quisberhitung : Fragment() {
         }
     }
 
-    private fun getNext() {
+    private fun getNext2() {
         class GetJSON :
             AsyncTask<Void?, Void?, String>() {
 
@@ -233,7 +258,7 @@ class Fragment_tab1quisberhitung : Fragment() {
                 super.onPostExecute(s)
                 loading!!.dismiss()
                 JSON_STRING = s
-                showEmployee1()
+                showEmployee2()
             }
 
             override fun doInBackground(vararg params: Void?): String {
@@ -244,24 +269,5 @@ class Fragment_tab1quisberhitung : Fragment() {
 
         val gj = GetJSON()
         gj.execute()
-    }
-
-    fun ImageView.loadSvgOrOthers(myUrl: String?) {
-        myUrl?.let {
-            if (it.toLowerCase(Locale.ENGLISH).endsWith("svg")) {
-                val imageLoader = ImageLoader.Builder(this.context)
-                    .componentRegistry {
-                        add(SvgDecoder(this@loadSvgOrOthers.context))
-                    }
-                    .build()
-                val request = LoadRequest.Builder(this.context)
-                    .data(it)
-                    .target(this)
-                    .build()
-                imageLoader.execute(request)
-            } else {
-                this.load(myUrl)
-            }
-        }
     }
 }
