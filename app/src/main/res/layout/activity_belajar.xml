@@ -86,13 +86,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#00000000"
+        android:src="@drawable/mengenalhuruf"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.265"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,OnClick" />
 
     <Button
         android:id="@+id/btn_mengenal_huruf"
@@ -121,13 +122,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#00000000"
+        android:src="@drawable/mengenalangka"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.265"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,OnClick" />
 
     <Button
         android:id="@+id/btn_mengenal_angka"
@@ -156,6 +158,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#00000000"
+        android:src="@drawable/membaca"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
@@ -183,7 +186,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.802"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,OnClick" />
 
     <ImageView
         android:id="@+id/button_warna"
@@ -192,13 +195,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#00000000"
+        android:src="@drawable/mengenalwarna"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gifImageView"
         app:layout_constraintVertical_bias="0.741"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints, OnClick" />
 
     <Button
         android:id="@+id/btn_mengenal_warna"

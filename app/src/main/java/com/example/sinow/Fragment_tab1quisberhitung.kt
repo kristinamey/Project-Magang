@@ -263,7 +263,7 @@ class Fragment_tab1quisberhitung : Fragment() {
 
             override fun doInBackground(vararg params: Void?): String {
                 val rh = RequestHandler()
-                return rh.sendGetRequest("${resources.getString(R.string.base_url)}api/quiz/?tipe=pengurangan")
+                return rh.sendGetRequest(next_page)
             }
         }
 

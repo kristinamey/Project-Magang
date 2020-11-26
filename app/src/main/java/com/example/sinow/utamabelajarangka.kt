@@ -24,6 +24,19 @@ class utamabelajarangka : AppCompatActivity() {
             val intent = Intent(this, belajarangkalevel3::class.java)
             (startActivity(intent))
         }
+
+        satuan.setOnClickListener {
+            val intent = Intent(this, belajarangkalevel1::class.java)
+            (startActivity(intent))
+        }
+        puluhan.setOnClickListener {
+            val intent = Intent(this, belajarangkalevel2::class.java)
+            (startActivity(intent))
+        }
+        ratusan.setOnClickListener {
+            val intent = Intent(this, belajarangkalevel3::class.java)
+            (startActivity(intent))
+        }
         keluar.setOnClickListener {
          onBackPressed()
         }

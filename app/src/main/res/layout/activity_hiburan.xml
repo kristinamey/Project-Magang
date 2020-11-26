@@ -73,17 +73,18 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/button_huru"
+        android:id="@+id/button_mewarnai"
         android:layout_width="150dp"
         android:layout_height="180dp"
         android:background="#00000000"
+        android:src="@drawable/mewarnai"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/gifImageView5"
         app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.465"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints, OnClick" />
 
     <Button
         android:id="@+id/btn_mewarnai"
@@ -103,17 +104,18 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/button_angk"
+        android:id="@+id/button_menyanyi"
         android:layout_width="150dp"
         android:layout_height="180dp"
         android:background="#00000000"
+        android:src="@drawable/karaoke"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.465"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints, OnClick" />
 
     <Button
         android:id="@+id/btn_menyanyi"
