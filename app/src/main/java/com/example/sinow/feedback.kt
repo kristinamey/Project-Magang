@@ -16,6 +16,9 @@ class feedback : AppCompatActivity() {
         setContentView(R.layout.activity_feedback)
 
         btnkirim.setOnClickListener {
+            if(validate()){
+                Toast.makeText(this, "Terimakasih Kritik dan Saran Anda", Toast.LENGTH_SHORT).show()
+            }
             //tuliskan post ke backend
         }
     }
@@ -32,7 +35,7 @@ class feedback : AppCompatActivity() {
             false,
             false
         )
-        val stringRequest    = object : StringRequest(Request.Method.POST, "api/kritiksaran",
+        val stringRequest    = object : StringRequest(Request.Method.POST, "${resources.getString(R.string.base_url)}api/kritiksaran",
             Response.Listener { response ->
                 if(response.contains("data")){
                     loading.dismiss()
@@ -46,14 +49,30 @@ class feedback : AppCompatActivity() {
                 Toast.makeText(this, "Error server", Toast.LENGTH_SHORT).show()
             }
         ){
-           /* override fun getParams(): MutableMap<String, String, String> {
-                val params = HashMap<String, String, String>()
-                params.put(config.namanya)
-                params.put(config.emailnya)
-                params.put(config.komentarnya)
+           override fun getParams(): MutableMap<String, String> {
+                val params = HashMap<String, String>()
+                params["nama"] = namanya
+                params["email"] = emailnya
+                params["komentar"] = komentarnya
                 return params
-            }*/
+            }
         }
         Volley.newRequestQueue(this).add(stringRequest)
+    }
+
+    private fun validate() : Boolean{
+        if(nama.text.toString().isEmpty()){
+            nama.error = "harap isi bidang ini"
+            return false
+        }
+        if(email.text.toString().isEmpty()){
+            email.error = "harap isi bidang ini"
+            return false
+        }
+        if(komentar.text.toString().isEmpty()){
+            komentar.error = "harap isi bidang ini"
+            return false
+        }
+        return true
     }
 }

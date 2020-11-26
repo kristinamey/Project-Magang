@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/viewsoalberhitungplus"
-        android:layout_width="260dp"
-        android:layout_height="138dp"
+        android:layout_width="284dp"
+        android:layout_height="163dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/rectangle_5"
@@ -20,19 +20,64 @@
         app:layout_constraintVertical_bias="0.131"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btn_jawaban1"
+        android:layout_width="114dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/kotakquisberhitung"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469"
+        tools:ignore="MissingConstraints" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        app:layout_constraintTop_toBottomOf="@+id/viewsoalberhitungplus"
-        android:layout_marginTop="30dp"
-        android:layout_width="415dp"
-        android:layout_height="181dp"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:ignore="MissingConstraints"
-        tools:itemCount="4"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="412dp"
-        tools:listitem="@layout/itembtnquisberhitung" />
+    <Button
+        android:id="@+id/btn_jawaban2"
+        android:layout_width="114dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/kotakquisberhitung"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_jawaban3"
+        android:layout_width="114dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/kotakquisberhitung"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_jawaban4"
+        android:layout_width="114dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/kotakquisberhitung"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

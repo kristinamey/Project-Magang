@@ -40,7 +40,6 @@ class quismembaca : AppCompatActivity() {
         try {
             val jsonObject = JSONObject(JSON_STRING)
             val json = jsonObject.getJSONObject("data")
-
             prev_page_url = json.getString("prev_page_url")
             next_page = json.getString("next_page_url")
             val hasil = json.getString("data")
@@ -60,7 +59,7 @@ class quismembaca : AppCompatActivity() {
             quis1.setOnClickListener {
                 if(data[0].opsi_a == data[0].jawaban){
                     Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
-                    //next
+                    getNext()//next
                 }
                 else {
                     Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
@@ -69,7 +68,7 @@ class quismembaca : AppCompatActivity() {
             quis2.setOnClickListener {
                 if(data[0].opsi_b == data[0].jawaban){
                     Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
-                    //tambahkan next
+                    getNext()//tambahkan next
                 }
                 else {
                     Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
@@ -78,7 +77,7 @@ class quismembaca : AppCompatActivity() {
             quis3.setOnClickListener {
                 if(data[0].opsi_c == data[0].jawaban){
                     Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
-                    //tambahkan next
+                    getNext()//tambahkan next
                 }
                 else {
                     Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
@@ -87,7 +86,101 @@ class quismembaca : AppCompatActivity() {
             quis4.setOnClickListener {
                 if(data[0].opsi_d == data[0].jawaban){
                     Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
-                    //tambahkan next
+                    getNext()//tambahkan next
+                }
+                else {
+                    Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
+                }
+            }
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun getNext() {
+        class GetJSON :
+            AsyncTask<Void?, Void?, String>() {
+
+            var loading: ProgressDialog? = null
+            override fun onPreExecute() {
+                super.onPreExecute()
+                loading = ProgressDialog.show(
+                    this@quismembaca,
+                    "Sedang memproses...",
+                    "Tunggu...",
+                    false,
+                    false
+                )
+            }
+
+            override fun onPostExecute(s: String) {
+                super.onPostExecute(s)
+                loading!!.dismiss()
+                JSON_STRING = s
+                showEmployee1()
+            }
+
+            override fun doInBackground(vararg params: Void?): String {
+                val rh = RequestHandler()
+                return rh.sendGetRequest( next_page )
+            }
+        }
+
+        val gj = GetJSON()
+        gj.execute()
+    }
+
+    private fun showEmployee1() {
+        try {
+            val jsonObject = JSONObject(JSON_STRING)
+            val json = jsonObject.getJSONObject("data")
+            prev_page_url = json.getString("prev_page_url")
+            next_page = json.getString("next_page_url")
+            val hasil = json.getString("data")
+            val list = object : TypeToken<ArrayList<ModelQuis>>() {}.type
+            val data = Gson().fromJson<ArrayList<ModelQuis>>(hasil, list)
+
+            val media2 = MediaPlayer()
+            media2.setDataSource(this, Uri.parse(data[0].pertanyaan))
+            media2.prepare()
+            media2.start()
+
+            quis1.text = data[0].opsi_a
+            quis2.text = data[0].opsi_b
+            quis3.text = data[0].opsi_c
+            quis4.text = data[0].opsi_d
+
+            quis1.setOnClickListener {
+                if(data[0].opsi_a == data[0].jawaban){
+                    Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
+                    getNext()//next
+                }
+                else {
+                    Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
+                }
+            }
+            quis2.setOnClickListener {
+                if(data[0].opsi_b == data[0].jawaban){
+                    Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
+                    getNext()//tambahkan next
+                }
+                else {
+                    Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
+                }
+            }
+            quis3.setOnClickListener {
+                if(data[0].opsi_c == data[0].jawaban){
+                    Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
+                    getNext()//tambahkan next
+                }
+                else {
+                    Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
+                }
+            }
+            quis4.setOnClickListener {
+                if(data[0].opsi_d == data[0].jawaban){
+                    Toast.makeText(this, "betul", Toast.LENGTH_SHORT).show()
+                    getNext()//tambahkan next
                 }
                 else {
                     Toast.makeText(this, "salah", Toast.LENGTH_SHORT).show()
@@ -130,5 +223,6 @@ class quismembaca : AppCompatActivity() {
         val gj = GetJSON()
         gj.execute()
     }
+
 
 }
