@@ -23,14 +23,14 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_belajarangkalevel1.*
 import kotlinx.android.synthetic.main.activity_belajarangkalevel2.*
 import kotlinx.android.synthetic.main.activity_belajarangkalevel3.*
-import kotlinx.android.synthetic.main.activity_quis.*
-import kotlinx.android.synthetic.main.activity_quis.keluar
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlinx.android.synthetic.main.activity_belajarangkalevel1.keluar as keluar1
+import kotlinx.android.synthetic.main.activity_belajarangkalevel2.keluar as keluar1
 import kotlinx.android.synthetic.main.activity_belajarangkalevel2.reload as reload1
 import kotlinx.android.synthetic.main.activity_belajarangkalevel3.reload as reload1
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.reload as reload1

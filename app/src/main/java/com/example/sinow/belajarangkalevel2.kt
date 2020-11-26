@@ -21,14 +21,13 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_belajarangkalevel1.*
 import kotlinx.android.synthetic.main.activity_belajarangkalevel2.*
-import kotlinx.android.synthetic.main.activity_quis.*
-import kotlinx.android.synthetic.main.activity_quis.keluar
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlinx.android.synthetic.main.activity_belajarangkalevel1.reload as reload1
+import kotlinx.android.synthetic.main.activity_belajarangkalevel2.keluar as keluar1
 
 class belajarangkalevel2 : AppCompatActivity() {
     var JSON_STRING = ""

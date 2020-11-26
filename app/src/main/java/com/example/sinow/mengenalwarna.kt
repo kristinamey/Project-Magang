@@ -25,8 +25,6 @@ import kotlinx.android.synthetic.main.activity_belajarangkalevel2.next
 import kotlinx.android.synthetic.main.activity_buahdansayur.*
 import kotlinx.android.synthetic.main.activity_mengenalwarna.*
 import kotlinx.android.synthetic.main.activity_mengenalwarna.back
-import kotlinx.android.synthetic.main.activity_quis.*
-import kotlinx.android.synthetic.main.activity_quis.keluar
 import kotlinx.android.synthetic.main.fragment_tab1mengenalhuruf.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -34,10 +32,12 @@ import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlinx.android.synthetic.main.activity_belajarangkalevel2.back as back1
+import kotlinx.android.synthetic.main.activity_belajarangkalevel2.keluar as keluar1
 import kotlinx.android.synthetic.main.activity_buahdansayur.back as back1
 import kotlinx.android.synthetic.main.activity_buahdansayur.inggris as inggris1
 import kotlinx.android.synthetic.main.activity_buahdansayur.next as next1
 import kotlinx.android.synthetic.main.activity_mengenalwarna.indo as indo1
+import kotlinx.android.synthetic.main.activity_mengenalwarna.keluar as keluar1
 import kotlinx.android.synthetic.main.activity_mengenalwarna.next as next1
 
 class mengenalwarna : AppCompatActivity() {

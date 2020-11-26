@@ -80,16 +80,16 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="14dp"
-            android:src="@drawable/rectangle"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <ImageView
             android:layout_marginLeft="245dp"
-            android:layout_marginTop="14dp"
-            android:src="@drawable/rectangle2"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/plus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </FrameLayout>

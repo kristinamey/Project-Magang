@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.example.sinow.mewarnai
 import kotlinx.android.synthetic.main.activity_belajar.*
 import kotlinx.android.synthetic.main.activity_hiburan.*
-import kotlinx.android.synthetic.main.activity_quis.*
 
 class hiburan : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
