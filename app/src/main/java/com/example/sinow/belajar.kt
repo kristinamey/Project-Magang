@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import kotlinx.android.synthetic.main.activity_belajar.*
+import kotlinx.android.synthetic.main.activity_hiburan.*
 
 class belajar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,22 @@ class belajar : AppCompatActivity() {
         }
 
         btn_mengenal_warna.setOnClickListener {
+            val intent = Intent(this, mengenalwarna::class.java)
+            (startActivity(intent))
+        }
+        button_huruf.setOnClickListener {
+            val intent = Intent(this, utamabelajarhuruf::class.java)
+            (startActivity(intent))
+        }
+        mengenal_angka.setOnClickListener {
+            val intent = Intent(this, utamabelajarangka::class.java)
+            (startActivity(intent))
+        }
+        membaca.setOnClickListener {
+            val intent = Intent(this, utamamembaca::class.java)
+            (startActivity(intent))
+        }
+        button_warna.setOnClickListener {
             val intent = Intent(this, mengenalwarna::class.java)
             (startActivity(intent))
         }

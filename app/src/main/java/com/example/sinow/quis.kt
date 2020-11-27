@@ -18,6 +18,14 @@ class quis : AppCompatActivity() {
             val intent = Intent(this, quismembaca::class.java)
             (startActivity(intent))
         }
+        view_berhitung.setOnClickListener {
+            val intent = Intent(this, quisberhitung::class.java)
+            (startActivity(intent))
+        }
+        view_membaca.setOnClickListener {
+            val intent = Intent(this, quismembaca::class.java)
+            (startActivity(intent))
+        }
         keluar.setOnClickListener {
 onBackPressed()
         }
