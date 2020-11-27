@@ -36,6 +36,28 @@
 
 
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white">
+
+        <com.app.drawing.Util.CanvasView
+            android:id="@+id/canvas_drawing"
+            app:paintColor="@color/colorPrimary"
+            app:paintStork="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_app_icon" />
+
+    </RelativeLayout>
 
     <!--    <View-->
     <!--        android:id="@+id/kotak1"-->
