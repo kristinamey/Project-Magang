@@ -1,63 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".mewarnai">
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:src="@drawable/homesementara" />
 
-    <ImageView
-        android:id="@+id/keluar3"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/keluar" />
-
-    <TextView
-        android:id="@+id/Mewarnai"
-        android:layout_width="257dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="75dp"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/baloo"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Mewarnai"
-        android:textColor="@color/hitam"
-        android:textSize="25dp" />
-
-
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
-        android:background="@color/white">
+        android:layout_height="wrap_content"
+        android:background="@color/buttonbelajar"
+        android:textStyle="bold"/>
 
-        <com.app.drawing.Util.CanvasView
-            android:id="@+id/canvas_drawing"
-            app:paintColor="@color/colorPrimary"
-            app:paintStork="10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/homesementara" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/app_name"
-            android:src="@mipmap/ic_app_icon" />
+            android:id="@+id/keluar3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/keluar"
+            android:visibility="gone"/>
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/Mewarnai"
+            android:layout_width="257dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="75dp"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/baloo"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Mewarnai"
+            android:textColor="@color/hitam"
+            android:textSize="25dp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.app.drawing.Util.CanvasView
+                android:id="@+id/canvas_drawing"
+                app:paintColor="@color/colorPrimary"
+                app:paintStork="10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_launcher" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
 
     <!--    <View-->
     <!--        android:id="@+id/kotak1"-->
@@ -245,4 +257,4 @@
 
     />
 
-</RelativeLayout>
+</LinearLayout>
